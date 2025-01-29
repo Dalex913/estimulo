@@ -1,0 +1,129 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in-left {
+    animation: fadeInLeft 1s ease-out forwards;
+}
+
+.feature-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.feature {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.feature.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature img {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+    transform: translateX(-100%);
+    transition: transform 0.6s ease-out;
+}
+
+.feature.in-view img {
+    transform: translateX(0);
+}
+
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    10% {
+        background-position: 10% 50%;
+    }
+
+    20% {
+        background-position: 20% 50%;
+    }
+
+    30% {
+        background-position: 30% 50%;
+    }
+
+    40% {
+        background-position: 40% 50%;
+    }
+
+    50% {
+        background-position: 50% 50%;
+    }
+
+    60% {
+        background-position: 60% 50%;
+    }
+
+    70% {
+        background-position: 70% 50%;
+    }
+
+    80% {
+        background-position: 80% 50%;
+    }
+
+    90% {
+        background-position: 90% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.animated-gradient {
+    background: linear-gradient(270deg, 
+        #14b8a6,   /* Teal */
+        #10b981,   /* Emerald */
+        #3b82f6,   /* Blue */
+        #6366f1,   /* Indigo */
+        #8b5cf6,   /* Purple */
+        #ec4899,   /* Magenta */
+        #f43f5e,   /* Red */
+        #f59e0b,   /* Amber */
+        #ffc107,   /* Yellow */
+        #0ea5e9,   /* Cyan */
+        #ffffff,   /* White */
+        #ff7eb6   /* Rosa */
+    );
+    background-size: 2000% 2000%;
+    animation: gradient-animation 13s linear infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
