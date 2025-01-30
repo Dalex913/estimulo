@@ -1,35 +1,34 @@
-<nav class="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-lime-200 py-3 md:top-6 md:rounded-3xl lg:max-w-screen-lg">
+<nav class="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-sky-300 py-3 md:top-6 md:rounded-3xl lg:max-w-screen-lg">
     <div class="px-4">
         <div class="flex items-center justify-between">
             <div class="flex shrink-0">
                 <a aria-current="page" class="flex items-center" routerLink="/">
                     <img class="h-9 w-auto"
-                        src="https://cdn-icons-png.flaticon.com/512/4509/4509646.png"
+                        src="https://logos-download.com/wp-content/uploads/2016/06/Psicologia_logo_symbol.png"
                         alt="Logo">
                 </a>
             </div>
             <div class="hidden md:flex md:items-center md:justify-center md:gap-5">
-                <a class="inline-block rounded-lg px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-violet-400"
+                <a class="inline-block rounded-xl px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-red-300"
                     routerLink="/">Inicio</a>
-                <a class="inline-block rounded-lg px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-sky-400"
+                <a class="inline-block rounded-xl px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-red-300"
                     routerLink="/about">Nosotros</a>
-                <a class="inline-block rounded-lg px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-red-300"
+                <a class="inline-block rounded-xl px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-red-300"
                     routerLink="/contact">Contáctanos</a>
-                <a class="inline-block rounded-lg px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-violet-400"
-                    routerLink="/faq">FAQ</a>
-                <a class="inline-block rounded-lg px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-sky-400"
+                <a class="inline-block rounded-xl px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-red-300"
+                    routerLink="/faq">Foro</a>
+                <a class="inline-block rounded-xl px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-red-300"
                     routerLink="/preview">Documentación</a>
             </div>
+            
             <div class="flex items-center justify-end gap-3">
-                <a class="hidden sm:inline-flex items-center justify-center rounded-xl bg-violet-400 px-3 py-2 text-lg font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 transition-all duration-150 hover:bg-gray-50"
-                    routerLink="/register">EMPEZAR</a>
-                <button (click)="toggleMobileMenu()" class="md:hidden text-white focus:outline-none">
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
+                <a routerLink="/register" class="relative inline-flex items-center justify-start px-4 py-3 overflow-hidden font-medium transition-all bg-red-500 rounded-xl group">
+                    <span class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-red-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+                        <span class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                    </span>
+                    <span class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-red-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
+                    <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">Empezar</span>
+                </a>
             </div>
         </div>
         <div id="mobile-menu"
