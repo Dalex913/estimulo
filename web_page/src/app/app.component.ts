@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'web_page';
-}
+  isLoading: boolean = true;
+
+  constructor(private cdr: ChangeDetectorRef) {}
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.isLoading = false;
+      this.cdr.detectChanges(); // Forzar actualización
+    }, 1000); // Reducimos el tiempo a 1 segundo
+    }
+  };
+

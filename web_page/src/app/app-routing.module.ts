@@ -6,6 +6,7 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { ForoComponent } from './pages/foro/foro.component';
 import { PoliticasComponent } from './pages/politicas/politicas.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
