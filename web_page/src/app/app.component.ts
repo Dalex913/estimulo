@@ -7,7 +7,7 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 })
 export class AppComponent {
   isLoading: boolean = true;
-
+  title = 'web_page';
   constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {

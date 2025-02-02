@@ -13,6 +13,8 @@ import { ForoComponent } from './pages/foro/foro.component';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { PoliticasComponent } from './pages/politicas/politicas.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { LoadingComponent } from './components/loading/loading.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [
     provideClientHydration(), provideHttpClient(withFetch())

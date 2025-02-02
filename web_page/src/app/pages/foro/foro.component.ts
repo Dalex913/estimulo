@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ForoService } from '../../services/foro.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-foro',
@@ -11,47 +12,51 @@ export class ForoComponent {
   nuevaPregunta = { titulo: '', descripcion: '' };
   mostrarModal = false;
   preguntaSeleccionada: any = null;
-  nuevaRespuesta = { autor: '', contenido: '', icono: '' };
+  nuevaRespuesta = { autor: '', contenido: '' };
+  isLoading: boolean = false;
 
-  // Lista de iconos como URLs
-  listaIconos: string[] = [
-    'assets/icons/icon1.jpg', 'assets/icons/icon2.jpg', 'assets/icons/icon3.jpg',
-    'assets/icons/icon4.jpg', 'assets/icons/icon5.jpg', 'assets/icons/icon6.jpg',
-    'assets/icons/icon7.jpg', 'assets/icons/icon8.jpg', 'assets/icons/icon9.jpg', 'assets/icons/icon10.jpg'
-  ];
-
-  constructor(private foroService: ForoService) {}
+  constructor(
+    private foroService: ForoService,
+    private toastr: ToastrService
+  ) { }
 
   ngOnInit() {
     this.cargarPreguntas();
   }
 
+  onClick() {
+    this.isLoading = true;
+    this.cargarPreguntas();
+  }
   cargarPreguntas() {
     this.foroService.obtenerPreguntas().subscribe(
       (data) => {
         this.preguntas = data;
-      },
-      (error) => {
-        console.error('Error al cargar preguntas:', error);
       }
     );
   }
 
   agregarPregunta() {
-    if (!this.nuevaPregunta.titulo || !this.nuevaPregunta.descripcion) {
-      alert('Por favor, complete el título y la descripción.');
-      return;
-    }
-
-    this.foroService.agregarPregunta(this.nuevaPregunta).subscribe(
-      () => {
-        this.nuevaPregunta = { titulo: '', descripcion: '' };
-        this.cargarPreguntas(); // Recargar las preguntas
-      },
-      (error) => {
-        console.error('Error al agregar pregunta:', error);
+    this.isLoading = true;
+    setTimeout(() => {
+      if (!this.nuevaPregunta.titulo || !this.nuevaPregunta.descripcion) {
+        this.isLoading = false;
+        this.toastr.warning("Por favor, completa los campos requeridos", "Atención")
+        return;
       }
-    );
+      this.foroService.agregarPregunta(this.nuevaPregunta).subscribe(
+        () => {
+          this.nuevaPregunta = { titulo: '', descripcion: '' };
+          this.cargarPreguntas();
+          this.toastr.success("Tema agregado", "Exito")
+          this.isLoading = false;
+        },
+        (error) => {
+          this.toastr.error("Ocurrio algo inesperado", "Error")
+          this.isLoading = false;
+        }
+      );
+    }, 2000);
   }
 
   abrirModal(pregunta: any) {
@@ -61,34 +66,29 @@ export class ForoComponent {
 
   cerrarModal() {
     this.mostrarModal = false;
-    this.nuevaRespuesta = { autor: '', contenido: '', icono: '' }; // Limpiar icono
+    this.nuevaRespuesta = { autor: '', contenido: '' };
   }
 
   responder() {
-    if (!this.preguntaSeleccionada || !this.nuevaRespuesta.autor || !this.nuevaRespuesta.contenido) {
-      alert('Por favor, complete su respuesta.');
-      return;
-    }
-
-    // Si no se ha seleccionado un icono, asignar uno por defecto
-    if (!this.nuevaRespuesta.icono) {
-      this.nuevaRespuesta.icono = 'assets/icons/default-avatar.jpg';
-    }
-
-    this.foroService.responderPregunta(this.preguntaSeleccionada.id, this.nuevaRespuesta).subscribe(
-      () => {
-        // Se agrega la respuesta a la pregunta seleccionada
-        this.preguntaSeleccionada.respuestas.push(this.nuevaRespuesta);
-        this.cerrarModal();
-      },
-      (error) => {
-        console.error('Error al responder pregunta:', error);
+    this.isLoading = true;
+    setTimeout(() => {
+      if (!this.preguntaSeleccionada || !this.nuevaRespuesta.autor || !this.nuevaRespuesta.contenido) {
+        this.isLoading = false;
+        this.toastr.warning("Por favor, completa los campos requeridos", "Atención")
+        return;
       }
-    );
-  }
-
-  seleccionarIcono(icono: string) {
-    // Asignar el icono seleccionado
-    this.nuevaRespuesta.icono = icono;
+      this.foroService.responderPregunta(this.preguntaSeleccionada._id, this.nuevaRespuesta).subscribe(
+        () => {
+          this.preguntaSeleccionada.respuestas.push(this.nuevaRespuesta);
+          this.cerrarModal();
+          this.toastr.success("Respuesta agregada", "Exito")
+          this.isLoading = false;
+        },
+        (error) => {
+          this.toastr.error("Ocurrio algo inesperado", "Error")
+          this.isLoading = false;
+        }
+      );
+    }, 2000);
   }
 }
