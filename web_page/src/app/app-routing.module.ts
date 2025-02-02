@@ -5,6 +5,7 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { ForoComponent } from './pages/foro/foro.component';
+import { PoliticasComponent } from './pages/politicas/politicas.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'contacto', component: ContactoComponent },
   { path: 'formulario', component: FormularioComponent },
   { path: 'foro', component: ForoComponent },
+  { path: 'politicas', component: PoliticasComponent },
 ];
 
 @NgModule({

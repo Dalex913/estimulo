@@ -11,6 +11,7 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { ForoComponent } from './pages/foro/foro.component';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { PoliticasComponent } from './pages/politicas/politicas.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/
     ContactoComponent,
     FormularioComponent,
     ForoComponent,
+    PoliticasComponent,
   ],
   imports: [
     BrowserModule,

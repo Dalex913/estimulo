@@ -2,18 +2,14 @@
     class="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-sky-300 py-3 md:top-6 md:rounded-3xl lg:max-w-screen-lg">
     <div class="px-4">
         <div class="flex items-center justify-between">
-            <!-- Logo y nombre (en dispositivos grandes y pequeños) -->
             <div class="flex items-center">
                 <a aria-current="page" class="flex items-center" routerLink="/">
                     <img class="h-9 w-auto"
                         src="https://logos-download.com/wp-content/uploads/2016/06/Psicologia_logo_symbol.png"
                         alt="Logo">
-                    <!-- Nombre al lado del logo (visible siempre) -->
-                    <span class=" ml-2 text-lg font-semibold text-black">SCK</span>
+                    <span class=" ml-2 text-xl font-bold text-black">SCK</span>
                 </a>
             </div>
-
-            <!-- Botón de menú hamburguesa (solo en dispositivos pequeños) -->
             <div class="md:hidden flex items-center">
                 <button (click)="toggleMobileMenu()" class="text-gray-700 focus:outline-none">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -23,8 +19,6 @@
                     </svg>
                 </button>
             </div>
-
-            <!-- Menú en dispositivos grandes -->
             <div class="hidden md:flex md:items-center md:justify-center md:gap-5">
                 <a class="inline-block rounded-xl px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-red-300"
                     routerLink="/">Inicio</a>
@@ -35,10 +29,8 @@
                 <a class="inline-block rounded-xl px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-red-300"
                     routerLink="foro">Foro</a>
                 <a class="inline-block rounded-xl px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-red-300"
-                    routerLink="/preview">Nosotros</a>
+                    routerLink="/nosotros">Nosotros</a>
             </div>
-
-            <!-- Botón "Empezar" -->
             <div class="flex items-center justify-end gap-3">
                 <a routerLink="/formulario"
                     class="relative inline-flex items-center justify-start px-4 py-3 overflow-hidden font-medium transition-all bg-red-500 rounded-xl group">
@@ -54,8 +46,6 @@
                 </a>
             </div>
         </div>
-
-        <!-- Menú móvil -->
         <div id="mobile-menu"
             [ngClass]="{'hidden': !mobileMenuOpen, 'flex-col': mobileMenuOpen, 'mt-4': mobileMenuOpen, 'space-y-2': mobileMenuOpen, 'md:hidden': mobileMenuOpen}">
             <a class="block rounded-lg px-4 py-2 text-base font-semibold text-white transition-all duration-200 hover:bg-sky-500"
@@ -65,13 +55,9 @@
             <a class="block rounded-lg px-4 py-2 text-base font-semibold text-white transition-all duration-200 hover:bg-sky-500"
                 routerLink="/contact" (click)="toggleMobileMenu()">Contáctanos</a>
             <a class="block rounded-lg px-4 py-2 text-base font-semibold text-white transition-all duration-200 hover:bg-sky-500"
-                routerLink="/faq" (click)="toggleMobileMenu()">FAQ</a>
-            <a class="block rounded-lg px-4 py-2 text-base font-semibold text-white transition-all duration-200 hover:bg-sky-500"
-                routerLink="foro" (click)="toggleMobileMenu()">Documentación</a>
-            <a class="block rounded-xl bg-white px-4 py-2 text-base font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 transition-all duration-150 hover:bg-gray-50"
-                routerLink="/register" (click)="toggleMobileMenu()">Registrarse</a>
-            <a class="block rounded-xl bg-blue-600 px-4 py-2 text-base font-semibold text-white shadow-sm transition-all duration-150 hover:bg-blue-500"
-                routerLink="/login" (click)="toggleMobileMenu()">Iniciar sesión</a>
+                routerLink="foro" (click)="toggleMobileMenu()">Foro</a>
+                <a class="block rounded-lg px-4 py-2 text-base font-semibold text-white transition-all duration-200 hover:bg-sky-500"
+                routerLink="/nosotros" (click)="toggleMobileMenu()">Nosotros</a>
         </div>
     </div>
 </nav>
