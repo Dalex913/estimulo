@@ -1,13 +1,30 @@
-<nav class="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-sky-300 py-3 md:top-6 md:rounded-3xl lg:max-w-screen-lg">
+<nav
+    class="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-sky-300 py-3 md:top-6 md:rounded-3xl lg:max-w-screen-lg">
     <div class="px-4">
         <div class="flex items-center justify-between">
-            <div class="flex shrink-0">
+            <!-- Logo y nombre (en dispositivos grandes y pequeños) -->
+            <div class="flex items-center">
                 <a aria-current="page" class="flex items-center" routerLink="/">
                     <img class="h-9 w-auto"
                         src="https://logos-download.com/wp-content/uploads/2016/06/Psicologia_logo_symbol.png"
                         alt="Logo">
+                    <!-- Nombre al lado del logo (visible siempre) -->
+                    <span class=" ml-2 text-lg font-semibold text-black">SCK</span>
                 </a>
             </div>
+
+            <!-- Botón de menú hamburguesa (solo en dispositivos pequeños) -->
+            <div class="md:hidden flex items-center">
+                <button (click)="toggleMobileMenu()" class="text-gray-700 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menú en dispositivos grandes -->
             <div class="hidden md:flex md:items-center md:justify-center md:gap-5">
                 <a class="inline-block rounded-xl px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-red-300"
                     routerLink="/">Inicio</a>
@@ -16,21 +33,29 @@
                 <a class="inline-block rounded-xl px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-red-300"
                     routerLink="/contact">Testimonios</a>
                 <a class="inline-block rounded-xl px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-red-300"
-                    routerLink="/faq">Foro</a>
+                    routerLink="foro">Foro</a>
                 <a class="inline-block rounded-xl px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-red-300"
                     routerLink="/preview">Nosotros</a>
             </div>
-            
+
+            <!-- Botón "Empezar" -->
             <div class="flex items-center justify-end gap-3">
-                <a routerLink="/register" class="relative inline-flex items-center justify-start px-4 py-3 overflow-hidden font-medium transition-all bg-red-500 rounded-xl group">
-                    <span class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-red-700 rounded group-hover:-mr-4 group-hover:-mt-4">
-                        <span class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                <a routerLink="/formulario"
+                    class="relative inline-flex items-center justify-start px-4 py-3 overflow-hidden font-medium transition-all bg-red-500 rounded-xl group">
+                    <span
+                        class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-red-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+                        <span
+                            class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
                     </span>
-                    <span class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-red-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
-                    <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">Empezar</span>
+                    <span
+                        class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-red-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
+                    <span
+                        class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">Empezar</span>
                 </a>
             </div>
         </div>
+
+        <!-- Menú móvil -->
         <div id="mobile-menu"
             [ngClass]="{'hidden': !mobileMenuOpen, 'flex-col': mobileMenuOpen, 'mt-4': mobileMenuOpen, 'space-y-2': mobileMenuOpen, 'md:hidden': mobileMenuOpen}">
             <a class="block rounded-lg px-4 py-2 text-base font-semibold text-white transition-all duration-200 hover:bg-sky-500"
@@ -42,7 +67,7 @@
             <a class="block rounded-lg px-4 py-2 text-base font-semibold text-white transition-all duration-200 hover:bg-sky-500"
                 routerLink="/faq" (click)="toggleMobileMenu()">FAQ</a>
             <a class="block rounded-lg px-4 py-2 text-base font-semibold text-white transition-all duration-200 hover:bg-sky-500"
-                routerLink="/preview" (click)="toggleMobileMenu()">Documentación</a>
+                routerLink="foro" (click)="toggleMobileMenu()">Documentación</a>
             <a class="block rounded-xl bg-white px-4 py-2 text-base font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 transition-all duration-150 hover:bg-gray-50"
                 routerLink="/register" (click)="toggleMobileMenu()">Registrarse</a>
             <a class="block rounded-xl bg-blue-600 px-4 py-2 text-base font-semibold text-white shadow-sm transition-all duration-150 hover:bg-blue-500"
