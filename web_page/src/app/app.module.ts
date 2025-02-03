@@ -15,6 +15,8 @@ import { PoliticasComponent } from './pages/politicas/politicas.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { ResultadosComponent } from './pages/resultados/resultados.component';
+import { ActividadesComponent } from './pages/actividades/actividades.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { ToastrModule } from 'ngx-toastr';
     ForoComponent,
     PoliticasComponent,
     LoadingComponent,
+    ResultadosComponent,
+    ActividadesComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,7 @@ import { ToastrModule } from 'ngx-toastr';
     ToastrModule.forRoot(),
   ],
   providers: [
-    provideClientHydration(), provideHttpClient(withFetch())
+    provideClientHydration(), provideHttpClient(withFetch(), )
   ],
   bootstrap: [AppComponent]
 })

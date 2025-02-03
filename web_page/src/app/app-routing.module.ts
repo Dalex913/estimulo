@@ -6,6 +6,8 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { ForoComponent } from './pages/foro/foro.component';
 import { PoliticasComponent } from './pages/politicas/politicas.component';
+import { ResultadosComponent } from './pages/resultados/resultados.component';
+import { ActividadesComponent } from './pages/actividades/actividades.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -15,6 +17,8 @@ const routes: Routes = [
   { path: 'formulario', component: FormularioComponent },
   { path: 'foro', component: ForoComponent },
   { path: 'politicas', component: PoliticasComponent },
+  { path: 'resultados', component: ResultadosComponent },
+  { path: 'actividades', component: ActividadesComponent },
 ];
 
 @NgModule({

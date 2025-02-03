@@ -1,59 +1,82 @@
-<div class="lg:m-10">
-    <form class="relative border border-gray-100 space-y-3 max-w-screen-md mx-auto rounded-md bg-white p-6 shadow-xl lg:p-10">
-    <h1 class="mb-6 text-xl font-semibold lg:text-2xl">Register</h1>
-  
-    <div class="grid gap-3 md:grid-cols-2">
-      <div> 
-        <label class=""> First Name </label>
-        <input type="text" placeholder="Your Name" class="mt-2 h-12 w-full rounded-md bg-gray-100 px-3" />
+<section class="bg-white">
+  <div class="flex justify-center min-h-screen">
+    <div class="hidden lg:block lg:w-2/5 bg-contain bg-center"
+      style="background-image: url('https://static.vecteezy.com/system/resources/previews/008/370/794/non_2x/children-jumping-rope-skipping-together-vector.jpg'); background-repeat: no-repeat;">
+    </div>
+    <div class="flex items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">
+      <div class="w-full">
+        <h1 class="text-3xl font-semibold text-black capitalize">🎈Formulario de Desarrollo Infantil</h1>
+        <p class="mt-4 text-gray-700 text-base">Registra la información para ayudarte con una recomendación</p>
+        <form class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
+          <!-- Edad -->
+          <div class="rounded-lg">
+            <h1 class="flex mb-2 text-base text-gray-500 items-center">
+              <img src="https://sharecancun.com/shc/wp-content/uploads/2023/03/ICONOS-RIFA-2.gif" alt="Icono"
+                class="h-14 w-14 mr-2 rounded-full">
+              Edad
+            </h1>
+            <div class="flex items-center mt-2 space-x-2">
+              <button type="button" (click)="disminuirEdad()"
+                class="bg-blue-300 px-3 py-2 rounded-lg hover:bg-blue-400">➖</button>
+              <input id="edad" type="number" name="edad" [(ngModel)]="formData.edad" required min="1" max="18"
+                class="w-16 text-center p-2 border border-gray-300 rounded-lg" />
+              <button type="button" (click)="aumentarEdad()"
+                class="bg-blue-300 px-3 py-2 rounded-lg hover:bg-blue-400">➕</button>
+            </div>
+          </div>
+
+          <!-- Área de Desarrollo -->
+          <div class="rounded-lg">
+            <h1 class="flex mb-2 text-base text-gray-500 items-center">
+              <img src="https://cdn-icons-gif.flaticon.com/11681/11681331.gif" alt="Icono"
+                class="h-14 w-14 mr-2 rounded-full">
+              Área de Desarrollo
+            </h1>
+            <div class="mb-4">
+              <select [(ngModel)]="formData.areasDesarrollo" class="w-full p-2 border rounded-lg bg-white">
+                <option *ngFor="let area of areasDesarrolloOpciones" [value]="area">{{ area }}</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Sensibilidades -->
+          <div class="rounded-lg">
+            <h1 class="flex mb-2 text-base text-gray-500 items-center">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrWqKiD9laT9tldbSa8y9kGeAltMBMOI2E7wBP3qKCdd617LJyw9w5m_bMLjSeNYXj_4U&usqp=CAU"
+                alt="Icono" class="h-14 w-14 mr-2 rounded-full">
+              Sensibilidades
+            </h1>
+            <div class="mb-4">
+              <select [(ngModel)]="formData.sensibilidades" class="w-full p-2 border rounded-xl bg-white">
+                <option *ngFor="let sensibilidad of sensibilidadesOpciones" [value]="sensibilidad">{{ sensibilidad }}
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Intereses -->
+          <div class="rounded-lg">
+            <h1 class="flex mb-2 text-base text-gray-500 items-center">
+              <img src="https://i.pinimg.com/originals/d6/b1/32/d6b1324ef0acf8c0d199ac083742c3c4.gif" alt="Icono"
+                class="h-14 w-14 mr-2 rounded-full">
+              Intereses
+            </h1>
+            <div class="mb-4">
+              <select [(ngModel)]="formData.intereses" class="w-full p-2 border rounded-lg bg-white">
+                <option *ngFor="let interes of interesesOpciones" [value]="interes">{{ interes }}</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Botón de Enviar -->
+          <button (click)="enviarFormulario()"
+            class="w-full bg-green-500 text-black py-2 rounded-xl hover:bg-green-600 text-center text-lg">Generar
+            Recomendaciones
+          </button>
+        </form>
       </div>
-      <div>
-        <label class=""> Last Name </label>
-        <input type="text" placeholder="Last  Name" class="mt-2 h-12 w-full rounded-md bg-gray-100 px-3" />
-      </div>
     </div>
-    <div>
-      <label class=""> Username </label>
-      <input type="text" placeholder="Username" class="mt-2 h-12 w-full rounded-md bg-gray-100 px-3" />
-    </div>
-    <div>
-      <label class=""> Email Address </label>
-      <input type="email" placeholder="Info@example.com" class="mt-2 h-12 w-full rounded-md bg-gray-100 px-3" />
-    </div>
-    <div>
-      <label class=""> Password </label>
-      <input type="password" placeholder="******" class="mt-2 h-12 w-full rounded-md bg-gray-100 px-3" />
-    </div>
-    <div class="grid gap-3 lg:grid-cols-2">
-      <div>
-        <label class=""> Gender </label>
-        <div class="relative w-56 mt-2 bg-gray-100 rounded-lg">
-          <input class="peer hidden" type="checkbox" name="select-1" id="select-1" />
-          <label for="select-1" class="flex w-full cursor-pointer rounded-lg select-none border p-2 px-3 text-sm text-gray-700 ring-blue-400 peer-checked:ring">Select Option </label>
-          <svg xmlns="http://www.w3.org/2000/svg" class="pointer-events-none absolute right-5 top-3 h-4 text-gray-600 transition peer-checked:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-          <ul class="max-h-0 select-none flex-col overflow-hidden rounded-b-lg shadow-md transition-all duration-300 peer-checked:max-h-56 peer-checked:py-3">
-            <li class="cursor-pointer px-3 py-2 text-sm text-gray-500 hover:bg-blue-500 hover:text-white">Male</li>
-            <li class="cursor-pointer px-3 py-2 text-sm text-gray-500 hover:bg-blue-500 hover:text-white">Female</li>
-            <li class="cursor-pointer px-3 py-2 text-sm text-gray-500 hover:bg-blue-500 hover:text-white">Other</li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <label class=""> Phone: <span class="text-sm text-gray-400">(optional)</span> </label>
-        <input type="text" placeholder="+543 5445 0543" class="mt-2 h-12 w-full rounded-md bg-gray-100 px-3" />
-      </div>
-    </div>
-  
-    <div class="checkbox">
-      <input type="checkbox" id="chekcbox1" checked="" />
-      <label for="checkbox1">I agree to the <a href="#" target="_blank" class="text-blue-600"> Terms and Conditions </a> </label>
-    </div>
-  
-    <div>
-      <button type="button" class="mt-5 w-full rounded-md bg-blue-600 p-2 text-center font-semibold text-white">Get Started</button>
-    </div>
-  </form>
-  
   </div>
+</section>
+

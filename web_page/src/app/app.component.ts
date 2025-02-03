@@ -13,8 +13,8 @@ export class AppComponent {
   ngOnInit() {
     setTimeout(() => {
       this.isLoading = false;
-      this.cdr.detectChanges(); // Forzar actualización
-    }, 1000); // Reducimos el tiempo a 1 segundo
+      this.cdr.detectChanges();
+    }, 2500);
     }
   };
 
