@@ -13,13 +13,12 @@ import { formularioGuradGuard } from './guards/formulario-gurad.guard';
 const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'inicio', component: InicioComponent },
-  { path: 'nosotros', component: NosotrosComponent },
-  { path: 'contacto', component: ContactoComponent },
+  //{ path: 'nosotros', component: NosotrosComponent },
+  //{ path: 'contacto', component: ContactoComponent },
   { path: 'formulario', component: FormularioComponent },
   {
-    path: 'resultados',
-    component: ResultadosComponent,
-    canActivate: [formularioGuradGuard]  // Aplica el guard en la ruta de resultados
+    path: 'resultados',component: ResultadosComponent,
+    canActivate: [formularioGuradGuard]
   },
   { path: 'foro', component: ForoComponent },
   { path: 'politicas', component: PoliticasComponent },

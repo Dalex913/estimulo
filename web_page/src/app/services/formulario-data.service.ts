@@ -229,39 +229,39 @@ export class FormularioDataService {
   private obtenerInstrumentosPorArea(area: string): { nombre: string, imagenUrl: string }[] {
     const instrumentosConImagen: Record<string, { nombre: string, imagenUrl: string }[]> = {
       'Motricidad gruesa': [
-        { nombre: 'Pelota', imagenUrl: 'path_to_image/ball.jpg' },
-        { nombre: 'Soga', imagenUrl: 'path_to_image/rope.jpg' },
-        { nombre: 'Aro', imagenUrl: 'path_to_image/hula_hoop.jpg' },
-        { nombre: 'Bicicleta', imagenUrl: 'path_to_image/bike.jpg' },
-        { nombre: 'Escalera', imagenUrl: 'path_to_image/stairs.jpg' }
+        { nombre: 'Pelota', imagenUrl: 'https://static.vecteezy.com/system/resources/thumbnails/011/421/474/small/soccer-ball-realistic-png.png' },
+        { nombre: 'Soga', imagenUrl: 'https://cdn-icons-png.flaticon.com/512/8049/8049041.png' },
+        { nombre: 'Aro', imagenUrl: 'https://png.pngtree.com/png-clipart/20230811/original/pngtree-a-simplistic-design-of-an-abstract-human-figure-with-hoop-vector-picture-image_10313934.png' },
+        { nombre: 'Bicicleta', imagenUrl: 'https://cdn-icons-png.flaticon.com/512/2972/2972185.png' },
+        { nombre: 'Escalera', imagenUrl: 'https://cdn-icons-png.freepik.com/512/9027/9027996.png' }
       ],
       'Motricidad fina': [
-        { nombre: 'Tijeras', imagenUrl: 'path_to_image/scissors.jpg' },
-        { nombre: 'Pinceles', imagenUrl: 'path_to_image/paintbrush.jpg' },
-        { nombre: 'Piezas de rompecabezas', imagenUrl: 'path_to_image/puzzle.jpg' },
-        { nombre: 'Hilos', imagenUrl: 'path_to_image/threads.jpg' },
-        { nombre: 'Lápiz', imagenUrl: 'path_to_image/pencil.jpg' }
+        { nombre: 'Tijeras', imagenUrl: 'https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/1024px/2702.png' },
+        { nombre: 'Pinceles', imagenUrl: 'https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/1024px/1f58c.png' },
+        { nombre: 'Piezas de rompecabezas', imagenUrl: 'https://cdn-icons-png.flaticon.com/512/2972/2972202.png' },
+        { nombre: 'Hilos', imagenUrl: 'https://images.vexels.com/media/users/3/212381/isolated/lists/34bdef5b79859f2e4c5dea6c4a62a5c9-icono-plano-de-carretes-de-hilo-de-color.png' },
+        { nombre: 'Lápiz', imagenUrl: 'https://cdn-icons-png.flaticon.com/512/1150/1150978.png' }
       ],
       'Lenguaje': [
-        { nombre: 'Libro', imagenUrl: 'path_to_image/book.jpg' },
-        { nombre: 'Tarjetas didácticas', imagenUrl: 'path_to_image/flashcards.jpg' },
-        { nombre: 'Adivinanzas', imagenUrl: 'path_to_image/riddle_cards.jpg' },
-        { nombre: 'Pizarra', imagenUrl: 'path_to_image/whiteboard.jpg' },
-        { nombre: 'Diccionario', imagenUrl: 'path_to_image/dictionary.jpg' }
+        { nombre: 'Libro', imagenUrl: 'https://static.vecteezy.com/system/resources/previews/023/221/041/non_2x/open-book-school-supply-icon-free-png.png' },
+        { nombre: 'Tarjetas didácticas', imagenUrl: 'https://static.vecteezy.com/system/resources/previews/012/377/863/non_2x/credit-card-3d-icon-3d-render-concept-free-png.png' },
+        { nombre: 'Adivinanzas', imagenUrl: 'https://cloud.educaplay.com/recursos/616/19719827/image669329ccc2509.png' },
+        { nombre: 'Pizarra', imagenUrl: 'https://cdn-icons-png.flaticon.com/512/2135/2135039.png' },
+        { nombre: 'Diccionario', imagenUrl: 'https://cdn-icons-png.flaticon.com/512/8750/8750741.png' }
       ],
       'Cognitivo': [
-        { nombre: 'Memoria', imagenUrl: 'path_to_image/memory.jpg' },
-        { nombre: 'Juegos de lógica', imagenUrl: 'path_to_image/logic_game.jpg' },
+        { nombre: 'Memoria', imagenUrl: 'https://cdn-icons-png.flaticon.com/512/5265/5265672.png' },
+        { nombre: 'Juegos de lógica', imagenUrl: 'https://cdn-icons-png.flaticon.com/512/2241/2241398.png' },
         { nombre: 'Bloques de construcción', imagenUrl: 'path_to_image/building_blocks.jpg' },
-        { nombre: 'Abaco', imagenUrl: 'path_to_image/abacus.jpg' },
-        { nombre: 'Rompecabezas', imagenUrl: 'path_to_image/puzzle_game.jpg' }
+        { nombre: 'Abaco', imagenUrl: 'https://images.vexels.com/media/users/3/189550/isolated/preview/5931dd33fd082c85db78e9ee017076a6-bloques-de-construcci-n-3d.png' },
+        { nombre: 'Rompecabezas', imagenUrl: 'https://cdn-icons-png.flaticon.com/512/786/786771.png' }
       ],
       'Socioemocional': [
-        { nombre: 'Muñecos', imagenUrl: 'path_to_image/dolls.jpg' },
-        { nombre: 'Peluches', imagenUrl: 'path_to_image/stuffed_animals.jpg' },
-        { nombre: 'Cuentos', imagenUrl: 'path_to_image/story_books.jpg' },
-        { nombre: 'Juegos de mesa', imagenUrl: 'path_to_image/board_games.jpg' },
-        { nombre: 'Música relajante', imagenUrl: 'path_to_image/relax_music.jpg' }
+        { nombre: 'Muñecos', imagenUrl: 'https://cdn.iconscout.com/icon/free/png-256/free-muneco-de-nieve-sin-nieve-navidad-fria-33948.png' },
+        { nombre: 'Peluches', imagenUrl: 'https://cdn-icons-png.flaticon.com/512/4841/4841216.png' },
+        { nombre: 'Cuentos', imagenUrl: 'https://cdn-icons-png.flaticon.com/512/3281/3281000.png' },
+        { nombre: 'Juegos de mesa', imagenUrl: 'https://cdn-icons-png.flaticon.com/512/3401/3401312.png' },
+        { nombre: 'Música relajante', imagenUrl: 'https://cdn-icons-png.flaticon.com/512/5776/5776041.png' }
       ]
     };
   

@@ -25,11 +25,7 @@
                 <a class="inline-block rounded-xl px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-red-300"
                     routerLink="/actividades">Actividades</a>
                 <a class="inline-block rounded-xl px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-red-300"
-                    routerLink="/contact">Testimonios</a>
-                <a class="inline-block rounded-xl px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-red-300"
-                    routerLink="foro">Foro</a>
-                <a class="inline-block rounded-xl px-2 py-1 text-lg font-semibold text-black transition-all duration-200 hover:bg-red-300"
-                    routerLink="/nosotros">Nosotros</a>
+                    routerLink="/foro">Foro</a>
             </div>
             <div class="flex items-center justify-end gap-3">
                 <a routerLink="/formulario"
@@ -48,16 +44,12 @@
         </div>
         <div id="mobile-menu"
             [ngClass]="{'hidden': !mobileMenuOpen, 'flex-col': mobileMenuOpen, 'mt-4': mobileMenuOpen, 'space-y-2': mobileMenuOpen, 'md:hidden': mobileMenuOpen}">
-            <a class="block rounded-lg px-4 py-2 text-base font-semibold text-white transition-all duration-200 hover:bg-sky-500"
+            <a class="block rounded-lg px-4 py-2 text-base font-semibold text-black transition-all duration-200 hover:bg-sky-500"
                 routerLink="/" (click)="toggleMobileMenu()">Inicio</a>
-            <a class="block rounded-lg px-4 py-2 text-base font-semibold text-white transition-all duration-200 hover:bg-sky-500"
-                routerLink="/about" (click)="toggleMobileMenu()">Nosotros</a>
-            <a class="block rounded-lg px-4 py-2 text-base font-semibold text-white transition-all duration-200 hover:bg-sky-500"
-                routerLink="/contact" (click)="toggleMobileMenu()">Contáctanos</a>
-            <a class="block rounded-lg px-4 py-2 text-base font-semibold text-white transition-all duration-200 hover:bg-sky-500"
-                routerLink="foro" (click)="toggleMobileMenu()">Foro</a>
-                <a class="block rounded-lg px-4 py-2 text-base font-semibold text-white transition-all duration-200 hover:bg-sky-500"
-                routerLink="/nosotros" (click)="toggleMobileMenu()">Nosotros</a>
+            <a class="block rounded-lg px-4 py-2 text-base font-semibold text-black transition-all duration-200 hover:bg-sky-500"
+                routerLink="/actividades" (click)="toggleMobileMenu()">Actividades</a>
+            <a class="block rounded-lg px-4 py-2 text-base font-semibold text-black transition-all duration-200 hover:bg-sky-500"
+                routerLink="/foro" (click)="toggleMobileMenu()">Foro</a>
         </div>
     </div>
 </nav>

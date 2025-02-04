@@ -84,6 +84,7 @@ export class FormularioComponent {
       this.toastr.warning('Por favor complete todas las opciones antes de enviar', 'Campos incompletos');
       return false;
     }
+    localStorage.setItem('formularioCompleto', 'false');
     return true;
   }
 

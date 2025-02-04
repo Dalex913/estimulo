@@ -3,6 +3,7 @@ import { CanActivateFn, Router } from '@angular/router';
 
 export const formularioGuradGuard: CanActivateFn = (route, state) => {
   // Verificar si estamos en el entorno del navegador
+  // Verificar si estamos en el entorno del navegador
   if (typeof window !== 'undefined' && window.localStorage) {
     const formularioCompleto = localStorage.getItem('formularioCompleto');
     
@@ -10,9 +11,8 @@ export const formularioGuradGuard: CanActivateFn = (route, state) => {
     if (!formularioCompleto) {
       const router = inject(Router); // Inyecta el Router
       router.navigate(['/formulario']); // Redirige al formulario
-      return false;
+      return false; // No permite el acceso a la ruta de resultados
     }
   }
-
-  return true;
+  return true; //
 };

@@ -1,102 +1,122 @@
-
-<div *ngIf="recomendaciones" class="bg-white p-8 rounded-3xl shadow-xl max-w-4xl mx-auto mt-8 overflow-hidden">
-  <!-- Titulo -->
-  <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6 tracking-wide animate__animated animate__fadeIn">
-    🌟 Recomendaciones Personalizadas 🌟
-  </h2>
-
-  <div class="space-y-10 overflow-y-auto max-h-[75vh] scrollbar-hide">
-
-    <!-- Actividades -->
-    <div class="transition-all bg-gradient-to-r from-blue-200 via-blue-300 to-blue-400 p-6 rounded-xl shadow-lg hover:scale-105 transform duration-300">
-      <h3 class="text-2xl font-semibold text-gray-800 mb-4 tracking-tight">🎨 Actividades recomendadas:</h3>
-      <ul class="space-y-3">
-        <li *ngFor="let actividad of recomendaciones.actividades" class="text-lg text-gray-700">
-          {{ actividad }}
-        </li>
-      </ul>
-    </div>
-
-    <!-- Juegos recomendados -->
-    <div class="transition-all bg-gradient-to-r from-green-200 via-green-300 to-green-400 p-6 rounded-xl shadow-lg hover:scale-105 transform duration-300">
-      <h3 class="text-2xl font-semibold text-gray-800 mb-4 tracking-tight">🎮 Juegos recomendados:</h3>
-      <ul class="space-y-3">
-        <li *ngFor="let juego of recomendaciones.juegos" class="text-lg text-gray-700">
-          <a [href]="juego" target="_blank" class="text-indigo-600 hover:text-indigo-800 underline">
-            {{ juego }}
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Instrumentos recomendados -->
-    <div class="transition-all bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-400 p-6 rounded-xl shadow-lg hover:scale-105 transform duration-300">
-      <h3 class="text-2xl font-semibold text-gray-800 mb-4 tracking-tight">🛠️ Instrumentos recomendados:</h3>
-      <div *ngFor="let instrumento of recomendaciones.instrumentos" class="flex items-center space-x-6 mb-5">
-        <img [src]="instrumento.imagenUrl" alt="{{ instrumento.nombre }}" class="w-24 h-24 object-cover rounded-xl shadow-lg transition-transform transform hover:scale-110">
-        <div class="text-lg font-medium text-gray-800">{{ instrumento.nombre }}</div>
+<section *ngIf="recomendaciones">
+  <div class="font-[sans-serif] text-[#333] bg-white px-6">
+    <div class="mb-8 flex flex-col items-center justify-center">
+      <div
+        class="mt-24 grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl border border-gray-200">
+        <div class=" mt-5 md:max-w-md w-full py-4">
+          <div class="mr-2 py-5 px-8">
+            <h2 class="mb-4 text-4xl font-medium">🎨 Actividades <span class="text-blue-600">Recomendadas</span></h2>
+            <p class="mb-6">Te presentamos esta lista de recomendaciones. Elige la que mejor se ajuste a tus necesidades.</p>
+            <div class="mb-4 space-y-4">
+              <div *ngFor="let actividad of recomendaciones.actividades" class="flex space-x-2">
+                <span class="text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z"></path>
+                  </svg>
+                </span>
+                <span class="font-medium text-lg">{{ actividad }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="https://i.pinimg.com/originals/a5/98/d4/a598d4fc4118f5ea0cb49e2c9a34524d.gif"
+          alt="login-image" class="w-120 h-100 rounded-xl lg:w-140 lg:h-140" />
       </div>
     </div>
-
-    <!-- Hora recomendada -->
-    <div class="transition-all bg-gradient-to-r from-pink-200 via-pink-300 to-pink-400 p-6 rounded-xl shadow-lg hover:scale-105 transform duration-300">
-      <h3 class="text-2xl font-semibold text-gray-800 mb-4 tracking-tight">⏰ Hora recomendada para actividad:</h3>
-      <p class="text-lg text-gray-700">{{ recomendaciones.horaRecomendada }}</p>
-    </div>
-
-    <!-- Beneficios -->
-    <div class="transition-all bg-gradient-to-r from-purple-200 via-purple-300 to-purple-400 p-6 rounded-xl shadow-lg hover:scale-105 transform duration-300">
-      <h3 class="text-2xl font-semibold text-gray-800 mb-4 tracking-tight">🌱 Beneficios:</h3>
-      <ul class="space-y-3">
-        <li *ngFor="let beneficio of recomendaciones.beneficios" class="text-lg text-gray-700">
-          {{ beneficio }}
-        </li>
-      </ul>
-    </div>
-
   </div>
-</div>
-<section class="mx-auto my-10 flex max-w-xl flex-col rounded-3xl border-blue-300 px-4 py-10 text-gray-700 sm:border-8 sm:px-10 lg:max-w-screen-lg lg:flex-row">
-  <div class="mr-2">
-    <h2 class="mb-4 text-4xl font-medium">A Better <span class="text-blue-600">Learning Experience</span></h2>
-    <p class="mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nemo obcaecati commodi itaque aliquam.</p>
-    <div class="mb-4 space-y-4">
-      <div class="flex space-x-2">
-        <span class="text-blue-400">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z"></path>
-          </svg>
-        </span>
-        <span class="font-medium">New Puzzles Everyday</span>
-      </div>
-      <div class="flex space-x-2">
-        <span class="text-blue-400">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z"></path>
-          </svg>
-        </span>
-        <span class="font-medium">Daily Activities</span>
-      </div>
-      <div class="flex space-x-2">
-        <span class="text-blue-400">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z"></path>
-          </svg>
-        </span>
-        <span class="font-medium">Weekly Competitions</span>
-      </div>
-      <div class="flex space-x-2">
-        <span class="text-blue-400">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z"></path>
-          </svg>
-        </span>
-        <span class="font-medium">Challenges and Quizzes</span>
+  <div class="font-[sans-serif] text-[#333] bg-white px-6">
+    <div class="mb-8 flex flex-col items-center justify-center">
+      <div
+        class="grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl border border-gray-200">
+        <div class="md:max-w-md w-full py-4">
+          <div class="mr-2 py-5 px-8">
+            <h2 class="mb-4 text-4xl font-medium">🎮 Juegos <span class="text-violet-600">Recomendadas</span></h2>
+            <p class="mb-6">Explora nuestra selección de juegos y elige la opción que más te divierta. ¡La diversión te espera!</p>
+            <div class="mb-4 space-y-4">
+              <div class="flex space-x-2">
+                <ul class="grid grid-cols-2 gap-4">
+                  <li *ngFor="let juego of recomendaciones.juegos; let i = index" class="mb-4">
+                    <button 
+                      (click)="irAlJuego(juego)" 
+                      class="px-6 py-3 bg-violet-200 rounded-full text-lg text-gray-700 hover:bg-violet-300 focus:outline-none">
+                      Opción {{ i + 1 }}
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="https://aulavirtualmoodle.uleam.edu.ec/pluginfile.php/371186/course/overviewfiles/payana.gif"
+          alt="login-image" class="w-120 h-100 rounded-xl lg:w-140 lg:h-140" />
       </div>
     </div>
-    <div class="text-gray-400">and more...</div>
   </div>
-  <div class="h-96">
-    <img class="h-full w-full object-contain" src="/images/wv9smzv0S_DHtyCfKKeHA.png" alt="" />
+  <div class="font-[sans-serif] text-[#333] bg-white px-6">
+    <div class="flex flex-col items-center justify-center">
+      <div class="max-w-6xl w-full p-4 shadow-md rounded-xl border border-gray-200">
+        <h2 class="text-4xl font-medium text-center mb-6">
+          🛠️ Instrumento <span class="text-yellow-400">recomendados</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+          <div *ngFor="let instrumento of recomendaciones.instrumentos" 
+               class="flex flex-col items-center justify-center p-6 rounded-xl shadow-md">
+            <img [src]="instrumento.imagenUrl" 
+                 alt="{{ instrumento.nombre }}" 
+                 class="w-24 h-24 object-cover shadow-lg">
+            <div class="text-lg font-medium text-gray-800 mt-4 text-center">
+              {{ instrumento.nombre }}
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="font-[sans-serif] text-[#333] bg-white px-6 ">
+    <div class="mt-8 flex flex-col items-center justify-center">
+      <div
+        class="grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl border border-gray-200">
+        <div class="mt-2 md:max-w-md w-full py-4">
+          <div class="mr-2 py-5 px-8">
+            <h2 class="mb-4 text-4xl font-medium">⏰ Hora recomendada<span class="text-yellow-600"> para actividad</span></h2>
+            <div class="mb-4 space-y-4">
+              <div class="flex space-x-2">
+                {{ recomendaciones.horaRecomendada }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="https://cdn-icons-gif.flaticon.com/10282/10282564.gif"
+          alt="login-image" class="ml-20 w-60 h-60 rounded-xl lg:w-140 lg:h-140" />
+      </div>
+    </div>
+  </div>
+  <div class="font-[sans-serif] text-[#333] bg-white px-6">
+    <div class="mb-8 flex flex-col items-center justify-center">
+      <div
+        class="grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl border border-gray-200">
+        <div class="mt-8 md:max-w-md w-full py-4">
+          <div class="mr-2 py-5 px-8">
+            <h2 class="mb-4 text-4xl font-medium"><span class="text-pink-600">🌱 Beneficios:</span></h2>
+            <p class="mb-6">Te presentamos esta lista de recomendaciones. Elige la que mejor se ajuste a tus necesidades.</p>
+            <div class="mb-4 space-y-4">
+              <div *ngFor="let beneficio of recomendaciones.beneficios" class="flex space-x-2">
+                <span class="text-pink-400">
+                  <img src="https://cdn-icons-png.freepik.com/512/5610/5610944.png" alt="Icono" class="h-6 w-6">
+                </span>
+                <span class="font-medium text-lg">{{ beneficio }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="https://media.lordicon.com/icons/wired/flat/261-emoji-smile.gif"
+          alt="login-image" class="w-100 h-80 rounded-xl lg:w-140 lg:h-140" />
+      </div>
+    </div>
   </div>
 </section>
