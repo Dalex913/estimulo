@@ -1,27 +1,59 @@
-<!-- resultados.component.html -->
-<div class="container mx-auto p-6 mt-24">
-  <h2 class="text-3xl font-semibold text-center mb-6">Resultados</h2>
 
-  <!-- Recomendaciones -->
-  <div *ngIf="recomendaciones.length > 0" class="bg-white p-4 rounded-lg shadow-md mb-6">
-    <h3 class="text-2xl font-bold text-gray-800 mb-4">Recomendaciones:</h3>
-    <ul class="list-disc pl-6 space-y-2">
-      <li *ngFor="let recomendacion of recomendaciones" class="text-gray-700">
-        {{ recomendacion }}
-      </li>
-    </ul>
-  </div>
+<div *ngIf="recomendaciones" class="bg-white p-8 rounded-3xl shadow-xl max-w-4xl mx-auto mt-8 overflow-hidden">
+  <!-- Titulo -->
+  <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6 tracking-wide animate__animated animate__fadeIn">
+    🌟 Recomendaciones Personalizadas 🌟
+  </h2>
 
-  <!-- Juegos Recomendados -->
-  <div *ngIf="juegosRecomendados.length > 0" class="bg-white p-4 rounded-lg shadow-md">
-    <h3 class="text-2xl font-bold text-gray-800 mb-4">Juegos Recomendados:</h3>
-    <ul class="list-disc pl-6 space-y-2">
-      <li *ngFor="let juego of juegosRecomendados" class="text-gray-700">
-        <a [href]="juego.url" target="_blank" class="text-blue-500 hover:text-blue-700">
-          {{ juego.nombre }}
-        </a>
-      </li>
-    </ul>
+  <div class="space-y-10 overflow-y-auto max-h-[75vh] scrollbar-hide">
+
+    <!-- Actividades -->
+    <div class="transition-all bg-gradient-to-r from-blue-200 via-blue-300 to-blue-400 p-6 rounded-xl shadow-lg hover:scale-105 transform duration-300">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4 tracking-tight">🎨 Actividades recomendadas:</h3>
+      <ul class="space-y-3">
+        <li *ngFor="let actividad of recomendaciones.actividades" class="text-lg text-gray-700">
+          {{ actividad }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Juegos recomendados -->
+    <div class="transition-all bg-gradient-to-r from-green-200 via-green-300 to-green-400 p-6 rounded-xl shadow-lg hover:scale-105 transform duration-300">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4 tracking-tight">🎮 Juegos recomendados:</h3>
+      <ul class="space-y-3">
+        <li *ngFor="let juego of recomendaciones.juegos" class="text-lg text-gray-700">
+          <a [href]="juego" target="_blank" class="text-indigo-600 hover:text-indigo-800 underline">
+            {{ juego }}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Instrumentos recomendados -->
+    <div class="transition-all bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-400 p-6 rounded-xl shadow-lg hover:scale-105 transform duration-300">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4 tracking-tight">🛠️ Instrumentos recomendados:</h3>
+      <div *ngFor="let instrumento of recomendaciones.instrumentos" class="flex items-center space-x-6 mb-5">
+        <img [src]="instrumento.imagenUrl" alt="{{ instrumento.nombre }}" class="w-24 h-24 object-cover rounded-xl shadow-lg transition-transform transform hover:scale-110">
+        <div class="text-lg font-medium text-gray-800">{{ instrumento.nombre }}</div>
+      </div>
+    </div>
+
+    <!-- Hora recomendada -->
+    <div class="transition-all bg-gradient-to-r from-pink-200 via-pink-300 to-pink-400 p-6 rounded-xl shadow-lg hover:scale-105 transform duration-300">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4 tracking-tight">⏰ Hora recomendada para actividad:</h3>
+      <p class="text-lg text-gray-700">{{ recomendaciones.horaRecomendada }}</p>
+    </div>
+
+    <!-- Beneficios -->
+    <div class="transition-all bg-gradient-to-r from-purple-200 via-purple-300 to-purple-400 p-6 rounded-xl shadow-lg hover:scale-105 transform duration-300">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4 tracking-tight">🌱 Beneficios:</h3>
+      <ul class="space-y-3">
+        <li *ngFor="let beneficio of recomendaciones.beneficios" class="text-lg text-gray-700">
+          {{ beneficio }}
+        </li>
+      </ul>
+    </div>
+
   </div>
 </div>
 <section class="mx-auto my-10 flex max-w-xl flex-col rounded-3xl border-blue-300 px-4 py-10 text-gray-700 sm:border-8 sm:px-10 lg:max-w-screen-lg lg:flex-row">

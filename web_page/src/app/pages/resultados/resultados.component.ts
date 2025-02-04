@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
-// Define la interfaz para las recomendaciones y los juegos recomendados
-interface DatosFormulario {
-  recomendaciones: string[];
-  juegosRecomendados: { nombre: string; url: string }[];
-}
+import { ForoService } from '../../services/foro.service';
+import { FormularioDataService } from '../../services/formulario-data.service';
 
 @Component({
   selector: 'app-resultados',
@@ -14,25 +10,15 @@ interface DatosFormulario {
 })
 export class ResultadosComponent implements OnInit {
 
-  recomendaciones: string[] = [];
-  juegosRecomendados: any[] = [];
+  recomendaciones: any;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private recomendacionesService: FormularioDataService) {}
 
-  ngOnInit(): void {
-    if (typeof window !== 'undefined' && window.history.state) {
-      const navigation = window.history.state;
+  ngOnInit():void {
+    this.recomendacionesService.recomendaciones$.subscribe(data => {
       
-      if (navigation) {
-        const datos: DatosFormulario = navigation;
-        this.recomendaciones = datos.recomendaciones;
-        this.juegosRecomendados = datos.juegosRecomendados;
-  
-        console.log("Recomendaciones:", this.recomendaciones);
-        console.log("Juegos Recomendados:", this.juegosRecomendados);
-      }
-    } else {
-      console.warn('El objeto `window` o `history.state` no está disponible.');
-    }
+      this.recomendaciones = data;
+      console.log(data)
+    });
   }
 }

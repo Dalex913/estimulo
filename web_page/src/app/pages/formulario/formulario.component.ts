@@ -1,6 +1,7 @@
-// formulario.component.ts
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormularioDataService } from '../../services/formulario-data.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-formulario',
@@ -8,102 +9,116 @@ import { Router } from '@angular/router';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent {
-
-  formData = {
-    edad: 1,
-    intereses: '',
-    areasDesarrollo: [] as string[],
-    sensibilidades: ''
-  };
-  esFormularioValido(): boolean {
-    return (
-      this.formData.edad > 0 &&
-      this.formData.intereses.trim() !== '' &&
-      this.formData.areasDesarrollo.length > 0 &&
-      this.formData.sensibilidades.trim() !== ''
-    );
-  }
-
-  
+  loading: boolean = false;
+  edadOpciones = ['3-5 años', '6-8 años', '9-12 años'];
   areasDesarrolloOpciones = ['Motricidad gruesa', 'Motricidad fina', 'Lenguaje', 'Cognitivo', 'Socioemocional'];
   sensibilidadesOpciones = ['Sonidos fuertes', 'Luz intensa', 'Ambientes concurridos', 'Texturas específicas'];
   interesesOpciones = ['Animales', 'Música', 'Arte', 'Deportes', 'Tecnología'];
 
-  constructor(private router: Router) { }
+  seleccion = {
+    edad: '',
+    area: '',
+    sensibilidad: '',
+    interes: ''
+  };
 
-  enviarFormulario() {
-    const recomendaciones = this.generarRecomendaciones(this.formData);
-    const juegosRecomendados = this.generarJuegos(this.formData);
+  constructor(
+    private recomendacionesService: FormularioDataService,
+    private router: Router,
+    private toastr: ToastrService
+  ) { }
 
-    console.log('Recomendaciones:', recomendaciones);
-    console.log('Juegos Recomendados:', juegosRecomendados);
-    const state = { recomendaciones, juegosRecomendados };
-    this.router.navigate(['/resultados'], { state });
-  }
-
-
-  generarRecomendaciones(formData: any): string[] {
-    const recomendaciones: string[] = [];
-    const edad = Number(formData.edad);
-
-    if (edad <= 3) {
-      recomendaciones.push('🌈 Enfoque en actividades de motricidad gruesa, como gatear o caminar.');
-    } else if (edad > 3 && edad <= 6) {
-      recomendaciones.push('📚 Fomentar el desarrollo del lenguaje con juegos interactivos.');
-    }
-
-    if (formData.areasDesarrollo.includes('Motricidad gruesa')) {
-      recomendaciones.push('🏃‍♂️ Incluir actividades de movimiento, como bailar o correr.');
-    }
-    if (formData.areasDesarrollo.includes('Lenguaje')) {
-      recomendaciones.push('📖 Leer cuentos e incentivar el uso de frases completas.');
-    }
-    if (formData.sensibilidades.includes('Sonidos fuertes')) {
-      recomendaciones.push('🔇 Evitar ambientes ruidosos y crear un entorno tranquilo.');
-    }
-    if (formData.sensibilidades.includes('Luz intensa')) {
-      recomendaciones.push('💡 Asegurar espacios con iluminación tenue y regulable.');
-    }
-
-    if (formData.intereses.includes('Animales')) {
-      recomendaciones.push('🐶 Incluir actividades con animales de peluche o videos educativos.');
-    }
-    if (formData.intereses.includes('Música')) {
-      recomendaciones.push('🎵 Fomentar el uso de instrumentos musicales sencillos.');
-    }
-
-    return recomendaciones;
-  }
-
-  generarJuegos(formData: any): any[] {
-    const juegos = [];
-
-    if (formData.areasDesarrollo.includes('Motricidad gruesa')) {
-      juegos.push({ nombre: '🐒 Juego de saltos', url: 'https://example.com/saltos' });
-    }
-    if (formData.intereses.includes('Animales')) {
-      juegos.push({ nombre: '🦁 Explorador de la jungla', url: 'https://example.com/jungla' });
-    }
-    if (formData.intereses.includes('Música')) {
-      juegos.push({ nombre: '🎸 Ritmo y melodía', url: 'https://example.com/musica' });
-    }
-
-    return juegos;
-  }
-
-  aumentarEdad() {
-    if (this.formData.edad < 18) {
-      this.formData.edad++;
+  // Función para mapear el valor de edad
+  mapearEdad(edad: string): string {
+    switch (edad) {
+      case '3-5 años':
+        return '3-5';
+      case '6-8 años':
+        return '6-8';
+      case '9-12 años':
+        return '9-12';
+      default:
+        return '';
     }
   }
 
-  disminuirEdad() {
-    if (this.formData.edad > 1) {
-      this.formData.edad--;
+  // Función para mapear el área de desarrollo
+  mapearArea(area: string): string {
+    switch (area) {
+      case 'Motricidad gruesa':
+        return 'Motricidad gruesa';
+      case 'Motricidad fina':
+        return 'Motricidad fina';
+      case 'Lenguaje':
+        return 'Lenguaje';
+      case 'Cognitivo':
+        return 'Cognitivo';
+      case 'Socioemocional':
+        return 'Socioemocional';
+      default:
+        return '';
     }
   }
 
-  volver() {
-    this.router.navigate(['/']);
+  // Función para mapear el interés
+  mapearInteres(interes: string): string {
+    switch (interes) {
+      case 'Animales':
+        return 'Animales';
+      case 'Música':
+        return 'Música';
+      case 'Arte':
+        return 'Arte';
+      case 'Deportes':
+        return 'Deportes';
+      case 'Tecnología':
+        return 'Tecnología';
+      default:
+        return '';
+    }
+  }
+
+  validarFormulario(): boolean {
+    if (!this.seleccion.edad || !this.seleccion.area || !this.seleccion.sensibilidad || !this.seleccion.interes) {
+      localStorage.setItem('formularioCompleto', 'true');
+      this.toastr.warning('Por favor complete todas las opciones antes de enviar', 'Campos incompletos');
+      return false;
+    }
+    return true;
+  }
+
+  enviar() {
+    if (!this.validarFormulario()) {
+      return;
+    }
+    this.loading = true;
+    const datosSeleccionados = {
+      edad: this.mapearEdad(this.seleccion.edad),
+      area: this.mapearArea(this.seleccion.area),
+      sensibilidad: this.seleccion.sensibilidad, // Si deseas procesar las sensibilidades, agrega mapeo aquí.
+      interes: this.mapearInteres(this.seleccion.interes)
+    };
+    this.toastr.info("Generando recomendaciones", "Cargando");
+    setTimeout(() => {
+      this.recomendacionesService.enviarRecomendaciones(datosSeleccionados);
+      this.router.navigate(['/resultados']);
+      this.toastr.success("Recomendaciones generadoas", "Exito");
+      this.loading = false;
+    }, 3500);
+  }
+
+  onSensibilidadChange() {
+    if (this.seleccion.sensibilidad) {
+      // Si se selecciona una sensibilidad, deseleccionamos el interés
+      this.seleccion.interes = '';
+    }
+  }
+
+  // Método que se llama cuando cambia el interés
+  onInteresChange() {
+    if (this.seleccion.interes) {
+      // Si se selecciona un interés, deseleccionamos la sensibilidad
+      this.seleccion.sensibilidad = '';
+    }
   }
 }

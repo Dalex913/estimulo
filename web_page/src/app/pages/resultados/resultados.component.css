@@ -1,0 +1,17 @@
+img {
+    border-radius: 8px;
+    margin-top: 8px;
+    transition: transform 0.3s;
+  }
+  
+  img:hover {
+    transform: scale(1.1);
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  h3 {
+    margin-top: 20px;
+  }

@@ -8,6 +8,7 @@ import { ForoComponent } from './pages/foro/foro.component';
 import { PoliticasComponent } from './pages/politicas/politicas.component';
 import { ResultadosComponent } from './pages/resultados/resultados.component';
 import { ActividadesComponent } from './pages/actividades/actividades.component';
+import { formularioGuradGuard } from './guards/formulario-gurad.guard';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -15,6 +16,11 @@ const routes: Routes = [
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'formulario', component: FormularioComponent },
+  {
+    path: 'resultados',
+    component: ResultadosComponent,
+    canActivate: [formularioGuradGuard]  // Aplica el guard en la ruta de resultados
+  },
   { path: 'foro', component: ForoComponent },
   { path: 'politicas', component: PoliticasComponent },
   { path: 'resultados', component: ResultadosComponent },
