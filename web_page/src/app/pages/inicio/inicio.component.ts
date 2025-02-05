@@ -150,25 +150,25 @@ export class InicioComponent implements AfterViewInit {
 
   testimonials: Testimonial[] = [
     {
-      name: 'Juan Pérez',
+      name: 'Jose Rodríguez',
       title: 'Psicólogo Infantil',
       quote: '“Mi enfoque es brindar apoyo emocional a los niños que enfrentan desafíos como la ansiedad, el estrés y las dificultades de comportamiento. Utilizo terapia lúdica para crear un ambiente seguro y de confianza.”',
       imageUrl: 'https://reach.com.pt/wp-content/uploads/2022/04/andre-louro.jpg'
     },
     {
-      name: 'Ana María Gómez',
+      name: 'Patricia Diaz',
       title: 'Psicóloga Infantil y Educativa',
       quote: '“Como psicóloga educativa, ayudo a los niños a superar dificultades de aprendizaje, mejorar su autoestima y establecer habilidades sociales. Mi misión es fomentar un desarrollo emocional saludable en un entorno escolar.”',
       imageUrl: 'https://s3.sa-east-1.amazonaws.com/doctoralia.cl/doctor/82f09c/82f09cd17e5e8df0a4a7e967b8cfccb5_large.jpg'
     },
     {
-      name: 'Carlos Ramírez',
+      name: 'Carlos Escobar',
       title: 'Psicólogo Clínico Infantil',
       quote: '“Trabajo con niños que atraviesan dificultades emocionales y comportamentales, incluyendo trastornos de conducta y problemas familiares. Mi enfoque terapéutico está orientado a promover el bienestar psicológico en la infancia.”',
       imageUrl: 'https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_1_1200x1200/public/field_blog_entry_images/2023-05/shutterstock_1994511608.jpg?itok=92J1HIzH'
     },
     {
-      name: 'Maria José Vásquez',
+      name: 'Erika Vásquez',
       title: 'Psicóloga en Desarrollo Infantil',
       quote: '“Mi objetivo es trabajar de cerca con los niños y sus familias, ayudando a identificar y tratar problemas del desarrollo emocional y conductual desde la infancia. Fomento un ambiente terapéutico cálido y comprensivo.”',
       imageUrl: 'https://cdn.prod.website-files.com/6340630bc206e31341770199/667585e2aa6940ccbbd47f35_3417d182-71d4-4bfa-8493-b5b5f471a410.jpeg'
