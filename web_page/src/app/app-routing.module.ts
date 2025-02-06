@@ -9,12 +9,20 @@ import { PoliticasComponent } from './pages/politicas/politicas.component';
 import { ResultadosComponent } from './pages/resultados/resultados.component';
 import { ActividadesComponent } from './pages/actividades/actividades.component';
 import { formularioGuradGuard } from './guards/formulario-gurad.guard';
+import { SensorialesComponent } from './pages/sensoriales/sensoriales.component';
+import { MotricidadComponent } from './pages/motricidad/motricidad.component';
+import { CognitivoComponent } from './pages/cognitivo/cognitivo.component';
+import { RelajacionComponent } from './pages/relajacion/relajacion.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'inicio', component: InicioComponent },
   //{ path: 'nosotros', component: NosotrosComponent },
   //{ path: 'contacto', component: ContactoComponent },
+  { path: 'sensoriales', component: SensorialesComponent},
+  { path: 'motricidad', component: MotricidadComponent},
+  { path: 'cognitivo', component: CognitivoComponent},
+  { path: 'relajacion', component: RelajacionComponent},
   { path: 'formulario', component: FormularioComponent },
   {
     path: 'resultados',component: ResultadosComponent,

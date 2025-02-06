@@ -17,6 +17,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ResultadosComponent } from './pages/resultados/resultados.component';
 import { ActividadesComponent } from './pages/actividades/actividades.component';
+import { SensorialesComponent } from './pages/sensoriales/sensoriales.component';
+import { MotricidadComponent } from './pages/motricidad/motricidad.component';
+import { CognitivoComponent } from './pages/cognitivo/cognitivo.component';
+import { RelajacionComponent } from './pages/relajacion/relajacion.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +36,10 @@ import { ActividadesComponent } from './pages/actividades/actividades.component'
     LoadingComponent,
     ResultadosComponent,
     ActividadesComponent,
+    SensorialesComponent,
+    MotricidadComponent,
+    CognitivoComponent,
+    RelajacionComponent,
   ],
   imports: [
     BrowserModule,
