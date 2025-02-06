@@ -29,25 +29,43 @@
                     🚀 Ayudan en la regulación emocional.</p>
             </div>
             <div>
-                <p class="mb-6 border-l-4 border-green-400 pl-4 text-2xl leading-10 font-semibold">Actividades Sugeridas
+                <p class="mb-6 border-l-4 border-green-400 pl-4 text-2xl leading-10 font-semibold">
+                    Actividades Sugeridas
                 </p>
-                <p class="text-lg ttext-black text-justify"><b>🔥Exploración de Texturas:</b> Proporcionar materiales
-                    con
-                    diferentes texturas (telas, esponjas, papel de lija) para que los niños los toquen y describan.<br>
-                    <b>🔥Juegos de Sonidos:</b> Utilizar instrumentos musicales o grabaciones de sonidos para que los
-                    niños
-                    identifiquen y reproduzcan sonidos.<br>
-                    <b>🔥Pintura con los Dedos:</b> Permitir que los niños pinten usando los dedos, estimulando el
-                    sentido del
-                    tacto y la creatividad.
+                <p class="text-lg text-black text-justify">
+                    <b>🔥 Exploración de Texturas:</b> Proporciona materiales con diferentes texturas (telas, esponjas,
+                    papel de lija) para que los niños los toquen y describan.
+                    <br>
+                    <a href="https://www.youtube.com/shorts/GRYDL8lJQfw" target="_blank"
+                        class="text-blue-600 underline">
+                        Ver video de exploración de texturas
+                    </a><br>
+                    <b>🔥 Juegos de Sonidos:</b> Utiliza instrumentos musicales o grabaciones de sonidos para que los
+                    niños identifiquen y reproduzcan sonidos.
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=QSyK0t9yKIw" target="_blank"
+                        class="text-blue-600 underline">
+                        Ver video de juegos de sonidos
+                    </a><br>
+                    <b>🔥 Pintura con los Dedos:</b> Permite que los niños pinten usando los dedos, estimulando el
+                    sentido del tacto y la creatividad.
+                    <br><br>
                 </p>
+                <div class="mt-4">
+                    <iframe width="420" height="280" src="https://www.youtube.com/embed/ltezjmLyiu8?si=CJ-fu1e5hy8oAnUY"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
+
             <div>
                 <p class="mb-6 border-l-4 border-green-400 pl-4 text-2xl leading-10 font-semibold">Juego Relacionado</p>
 
                 <a href="https://quickdraw.withgoogle.com/" target="_blank">
-                    <img src="https://gifdb.com/images/high/dj-capybara-playing-piano-yz3cdfu8fc55cdah.gif"
-                        alt="Imagen del juego" class="mb-4 rounded-full w-40 mx-auto">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5930/5930147.png"
+                        alt="Imagen del juego" class="mb-4 w-40 mx-auto">
                 </a>
 
                 <a href="https://quickdraw.withgoogle.com/" target="_blank"
@@ -59,8 +77,8 @@
         </div>
     </div>
 </section>
-<div class="flex items-center justify-center mx-auto my-8 p-6 bg-white">
-    <a routerLink="/formulario"
+<div class="flex items-center justify-center mx-auto my-8 p-6 bg-white" *ngIf="!loading; else loadingTemplate">
+    <a (click)="reenviar()"
         class="relative inline-block p-8 px-12 py-5 overflow-hidden font-medium text-indigo-600 rounded-lg shadow-2xl group">
         <span
             class="absolute top-0 left-0 w-48 h-48 -mt-10 -ml-6 transition-all duration-700 bg-red-500 rounded-full blur-md ease"></span>
@@ -71,3 +89,6 @@
         <span class="relative text-white">Descubrir</span>
     </a>
 </div>
+<ng-template #loadingTemplate>
+    <app-loading></app-loading>
+</ng-template>

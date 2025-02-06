@@ -1,12 +1,34 @@
 <div class="font-[sans-serif] text-[#333] bg-white" *ngIf="!loading; else loadingTemplate">
   <div class="min-h-screen flex flex-col items-center justify-center">
-    <div
-      class="mt-24 grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl border ">
-      <div class=" mt-5 md:max-w-md w-full py-4">
-        <h1 class="text-center text-4xl font-semibold text-black">🎈Formulario de Desarrollo Infantil</h1>
+    <div class="mt-24 grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-2xl border
+      border-gray-600 bg-white">
+      <div class="mt-5 md:max-w-md w-full py-4">
+        <h1 class="text-center text-4xl font-semibold text-black">🎈Recomendaciones</h1>
         <p class="mt-4 text-gray-700 text-base">Registra la información para ayudarte con una recomendación</p>
 
         <div class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
+          <!-- Nombre del Padre -->
+          <div class="rounded-lg">
+            <h1 class="flex mb-2 text-base text-gray-500 items-center">
+              <img src="https://cdn-icons-png.flaticon.com/512/7703/7703912.png" alt="Icono"
+                class="h-12 w-12 mr-2 rounded-full">
+              Nombre del Padre
+            </h1>
+            <input [(ngModel)]="seleccion.padre" type="text" class="w-full p-2 border rounded-lg bg-white"
+              placeholder="Ingrese el nombre del padre">
+          </div>
+
+          <!-- Nombre del Niño -->
+          <div class="rounded-lg">
+            <h1 class="flex mb-2 text-base text-gray-500 items-center">
+              <img src="https://cdn-icons-png.flaticon.com/512/4225/4225123.png" alt="Icono"
+                class="h-12 w-12 mr-2 rounded-full">
+              Nombre del Niño
+            </h1>
+            <input [(ngModel)]="seleccion.nino" type="text" class="w-full p-2 border rounded-lg bg-white"
+              placeholder="Ingrese el nombre del niño">
+          </div>
+
           <!-- Edad -->
           <div class="rounded-lg">
             <h1 class="flex mb-2 text-base text-gray-500 items-center">
@@ -30,26 +52,12 @@
             </h1>
             <div class="mb-4">
               <select [(ngModel)]="seleccion.area" class="w-full p-2 border rounded-lg bg-white">
-                <option *ngFor="let area of areasDesarrolloOpciones" [value]="area">{{ area }}</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Sensibilidades -->
-          <div class="rounded-lg">
-            <h1 class="flex mb-2 text-base text-gray-500 items-center">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrWqKiD9laT9tldbSa8y9kGeAltMBMOI2E7wBP3qKCdd617LJyw9w5m_bMLjSeNYXj_4U&usqp=CAU"
-                alt="Icono" class="h-12 w-12 mr-2 rounded-full">
-              Sensibilidades
-            </h1>
-            <div class="mb-4">
-              <select [(ngModel)]="seleccion.sensibilidad" class="w-full p-2 border rounded-xl bg-white">
-                <option *ngFor="let sensibilidad of sensibilidadesOpciones" [value]="sensibilidad">{{ sensibilidad }}
+                <option *ngFor="let area of areasDesarrolloOpciones" [value]="area">{{ area }}
                 </option>
               </select>
             </div>
           </div>
+
           <!-- Intereses -->
           <div class="rounded-lg">
             <h1 class="flex mb-2 text-base text-gray-500 items-center">
@@ -59,13 +67,15 @@
             </h1>
             <div class="mb-4">
               <select [(ngModel)]="seleccion.interes" class="w-full p-2 border rounded-lg bg-white">
-                <option *ngFor="let interes of interesesOpciones" [value]="interes">{{ interes }}</option>
+                <option *ngFor="let interes of interesesOpciones" [value]="interes">{{ interes }}
+                </option>
               </select>
             </div>
           </div>
 
           <button (click)="enviar()"
-            class="mt-10 bg-green-500 text-black rounded-xl hover:bg-green-600 text-center text-lg py-2">Generar
+            class="mt-12 bg-blue-500 text-black rounded-xl hover:bg-blue-600 text-center text-lg py-1">
+            Generar
           </button>
         </div>
       </div>

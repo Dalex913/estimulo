@@ -21,6 +21,10 @@ import { SensorialesComponent } from './pages/sensoriales/sensoriales.component'
 import { MotricidadComponent } from './pages/motricidad/motricidad.component';
 import { CognitivoComponent } from './pages/cognitivo/cognitivo.component';
 import { RelajacionComponent } from './pages/relajacion/relajacion.component';
+import { FormCognitivoComponent } from './pages/form-cognitivo/form-cognitivo.component';
+import { FormSensorialComponent } from './pages/form-sensorial/form-sensorial.component';
+import { FormMotricidadComponent } from './pages/form-motricidad/form-motricidad.component';
+import { FormRelajacionComponent } from './pages/form-relajacion/form-relajacion.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +44,10 @@ import { RelajacionComponent } from './pages/relajacion/relajacion.component';
     MotricidadComponent,
     CognitivoComponent,
     RelajacionComponent,
+    FormCognitivoComponent,
+    FormSensorialComponent,
+    FormMotricidadComponent,
+    FormRelajacionComponent,
   ],
   imports: [
     BrowserModule,

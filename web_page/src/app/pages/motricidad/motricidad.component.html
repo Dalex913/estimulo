@@ -44,8 +44,8 @@
 
                 <a href="https://v4.brainhq.com/?signup=success&fr=y#train/visual_scan/0/0/0/eyJjb21wbCI6eyJhIjpbIjEiLCJbXSIsIjAiLCIxIl0sImYiOiJmdHV4X3N0YXJfY3JpdCJ9LCJjdHgiOiJ0cmFpbmVyIiwicHRoIjp7ImV4IjoidmlzdWFsX3NjYW4iLCJncmlkIjowLCJ4IjowLCJ5IjowfSwicmVmIjpbMCwwXSwicmVwcyI6MCwidDAiOiIxNzM4MDI2NzM2IiwidGhyZXNoIjpudWxsfQ=="
                     target="_blank">
-                    <img src="https://media.tenor.com/o2rlJc1PoLMAAAAi/dancin-monkey.gif" alt="Imagen del juego"
-                        class="mb-4 rounded-full w-40 mx-auto">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5930/5930147.png" alt="Imagen del juego"
+                        class="mb-4 w-40 mx-auto">
                 </a>
 
                 <a href="https://v4.brainhq.com/?signup=success&fr=y#train/visual_scan/0/0/0/eyJjb21wbCI6eyJhIjpbIjEiLCJbXSIsIjAiLCIxIl0sImYiOiJmdHV4X3N0YXJfY3JpdCJ9LCJjdHgiOiJ0cmFpbmVyIiwicHRoIjp7ImV4IjoidmlzdWFsX3NjYW4iLCJncmlkIjowLCJ4IjowLCJ5IjowfSwicmVmIjpbMCwwXSwicmVwcyI6MCwidDAiOiIxNzM4MDI2NzM2IiwidGhyZXNoIjpudWxsfQ=="
@@ -58,8 +58,8 @@
         </div>
     </div>
 </section>
-<div class="flex items-center justify-center mx-auto my-8 p-6 bg-white">
-    <a routerLink="/formulario"
+<div class="flex items-center justify-center mx-auto my-8 p-6 bg-white" *ngIf="!loading; else loadingTemplate">
+    <a (click)="reenviar()"
         class="relative inline-block p-8 px-12 py-5 overflow-hidden font-medium text-indigo-600 rounded-lg shadow-2xl group">
         <span
             class="absolute top-0 left-0 w-48 h-48 -mt-10 -ml-6 transition-all duration-700 bg-red-500 rounded-full blur-md ease"></span>
@@ -70,3 +70,6 @@
         <span class="relative text-white">Descubrir</span>
     </a>
 </div>
+<ng-template #loadingTemplate>
+    <app-loading></app-loading>
+  </ng-template>

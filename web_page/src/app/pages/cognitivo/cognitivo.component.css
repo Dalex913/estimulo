@@ -27,3 +27,27 @@
 .fade-in-left {
     animation: fadeInLeft 1s ease-out forwards;
 }
+
+@keyframes growCircle {
+    0% {
+      transform: scale(0);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(5);
+      opacity: 0;
+    }
+  }
+  
+  .circle-animation {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 50%;
+    animation: growCircle 0.7s ease-out forwards;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  

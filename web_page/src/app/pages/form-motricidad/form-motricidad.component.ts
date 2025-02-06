@@ -1,22 +1,22 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { FormularioDataService } from '../../services/formulario-data.service';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-formulario',
-  templateUrl: './formulario.component.html',
-  styleUrls: ['./formulario.component.css']
+  selector: 'app-form-motricidad',
+  templateUrl: './form-motricidad.component.html',
+  styleUrl: './form-motricidad.component.css'
 })
-export class FormularioComponent {
+export class FormMotricidadComponent {
   loading: boolean = false;
   edadOpciones = ['3 años', '4 años', '5 años', '6 años'];
-  areasDesarrolloOpciones = ['Cognitiva','Sensorial','Motricidad'];
+  areasDesarrolloOpciones = ['Motricidad'];
   interesesOpciones = ['Animales', 'Música', 'Arte', 'Deportes'];
 
   seleccion = {
     edad: '',
-    area: '',
+    area: 'Motricidad', // Se establece como predeterminado
     padre: '',
     nino: '',
     interes: ''

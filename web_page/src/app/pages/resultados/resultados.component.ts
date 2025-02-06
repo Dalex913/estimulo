@@ -20,11 +20,13 @@ export class ResultadosComponent implements OnInit {
   ngOnInit(): void {
     this.recomendacionesService.recomendaciones$.subscribe(data => {
       this.recomendaciones = data;
+      console.log('Datos de recomendaciones:', this.recomendaciones);
       if (!this.recomendaciones || this.recomendaciones === null) {
         this.router.navigate(['/formulario']);
       }
     });
   }
+  
   irAlJuego(juego: string): void {
     window.open(juego, '_blank');
   }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cognitivo',
@@ -7,12 +8,14 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrl: './cognitivo.component.css'
 })
 export class CognitivoComponent {
-  // url: any;
+  loading: boolean = false;
+  constructor(private router: Router) { }
 
-  // constructor(private sanitizer: DomSanitizer) { }
-
-  // ngOnInit(): void {
-  //   const pageUrl = 'https://wordwall.net/es-ar/community/memory-game';
-  //   this.url = this.sanitizer.bypassSecurityTrustResourceUrl(pageUrl);
-  // }
+  reenviar() {
+    this.loading = true;
+    setTimeout(() => {
+      this.router.navigate(['/form-cognitivo']);
+      this.loading = false;
+    }, 2500);
+  }
 }

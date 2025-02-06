@@ -1,22 +1,22 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { FormularioDataService } from '../../services/formulario-data.service';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-formulario',
-  templateUrl: './formulario.component.html',
-  styleUrls: ['./formulario.component.css']
+  selector: 'app-form-sensorial',
+  templateUrl: './form-sensorial.component.html',
+  styleUrl: './form-sensorial.component.css'
 })
-export class FormularioComponent {
-  loading: boolean = false;
+export class FormSensorialComponent {
+ loading: boolean = false;
   edadOpciones = ['3 años', '4 años', '5 años', '6 años'];
-  areasDesarrolloOpciones = ['Cognitiva','Sensorial','Motricidad'];
+  areasDesarrolloOpciones = ['Sensorial'];
   interesesOpciones = ['Animales', 'Música', 'Arte', 'Deportes'];
 
   seleccion = {
     edad: '',
-    area: '',
+    area: 'Sensorial', // Se establece como predeterminado
     padre: '',
     nino: '',
     interes: ''
