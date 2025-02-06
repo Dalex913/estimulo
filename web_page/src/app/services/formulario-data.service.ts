@@ -16,7 +16,7 @@ export class FormularioDataService {
 
   private generarRecomendaciones(datos: { edad: string; area: string; interes: string; padre?: string; nino?: string }) {
     const actividades = this.obtenerActividadesPorEdadYArea(datos.edad, datos.area);
-    const juegos = this.obtenerJuegosPorInteres(datos.interes);
+    const juegos = this.obtenerJuegosPorInteres(datos.area);
     const instrumentos = this.obtenerInstrumentosPorArea(datos.area);
     const horaRecomendada = this.obtenerHoraRecomendada(datos.edad, datos.area);
     const beneficios = this.obtenerBeneficios(datos.area);
@@ -45,12 +45,12 @@ export class FormularioDataService {
           'Montar en bicicleta 🚴‍♀️', 'Hacer carreras de sacos 🏃‍♂️🛍️', 'Saltar en el trampolín 🤸‍♀️', 'Jugar al tiro al blanco 🎯'
         ],
         '5': [
-          'Patinar ⛸️', 'Montar bicicleta 🚴‍♀️🚴‍♂️', 'Hacer carreras de sacos 🏃‍♂️🛍️',
-          'Jugar a la cuerda 🪢', 'Correr en diferentes estilos 🏃‍♂️', 'Jugar al fútbol ⚽', 'Practicar escalada 🧗‍♂️'
+          'Patinar ⛸️', 'Montar bicicleta 🚴‍♀️', 'Jugar a la cuerda 🪢',
+          'Correr en diferentes estilos 🏃‍♂️', 'Jugar al fútbol ⚽', 'Practicar escalada 🧗‍♂️', 'Jugar a la soga 🪢'
         ],
         '6': [
-          'Patinar ⛸️', 'Montar bicicleta 🚴‍♀️🚴‍♂️', 'Hacer carreras de sacos 🏃‍♂️🛍️',
-          'Jugar a la cuerda 🪢', 'Correr en diferentes estilos 🏃‍♂️', 'Jugar al fútbol ⚽', 'Practicar escalada 🧗‍♂️'
+          'Patinar ⛸️', 'Montar bicicleta 🚴‍♀️', 'Jugar a la cuerda 🪢',
+          'Jugar al fútbol ⚽', 'Practicar escalada 🧗‍♂️', 'Jugar al baloncesto 🏀', 'Correr carreras de velocidad 🏃‍♂️'
         ]
       },
       'Sensorial': {
@@ -63,89 +63,91 @@ export class FormularioDataService {
           'Armar rompecabezas 🧩', 'Tejer con hilos 🧶', 'Coser con aguja sin punta 🪡', 'Tocar instrumentos pequeños 🎶'
         ],
         '5': [
-          'Armar figuras de papel 📄', 'Tejer con hilos 🧶', 'Construir maquetas 🏗️',
-          'Recortar detalles pequeños ✂️', 'Dibujar con lápices de colores ✏️', 'Escribir con pluma ✍️', 'Hacer trabajos manuales complejos 🎨'
+          'Recortar detalles pequeños ✂️', 'Dibujar con lápices de colores ✏️', 'Escribir con pluma ✍️',
+          'Armar figuras de papel 📄', 'Construir maquetas 🏗️', 'Tejer con hilos 🧶', 'Hacer trabajos manuales complejos 🎨'
         ],
         '6': [
-          'Armar figuras de papel 📄', 'Tejer con hilos 🧶', 'Construir maquetas 🏗️',
-          'Recortar detalles pequeños ✂️', 'Dibujar con lápices de colores ✏️', 'Escribir con pluma ✍️', 'Hacer trabajos manuales complejos 🎨'
+          'Modelar figuras en arcilla 🎭', 'Crear diseños con hilos 🧵', 'Coser figuras en fieltro 🪡',
+          'Recortar figuras con precisión ✂️', 'Pintar con técnicas avanzadas 🎨', 'Construir estructuras con madera 🏗️'
         ]
       },
       'Cognitiva': {
         '3': [
-          'Clasificar objetos por colores 🎨', 'Contar hasta 10 ✖️', 'Jugar a encontrar la diferencia 🔍',
-          'Ordenar objetos de mayor a menor 📏', 'Contar historias de manera simple 📖', 'Recoger objetos de acuerdo a categorías 🗃️', 'Jugar con números y formas geométricas 🔢'
+          'Clasificar objetos por colores 🎨', 'Contar hasta 10 🔢', 'Jugar a encontrar la diferencia 🔍',
+          'Ordenar objetos de mayor a menor 📏', 'Contar historias simples 📖', 'Agrupar objetos según su categoría 🗃️', 'Identificar figuras geométricas 🔺🔵'
         ],
         '4': [
-          'Resolver puzzles 🧩', 'Jugar a los laberintos 🏰', 'Contar historias complejas 📖',
-          'Jugar con tarjetas de memoria 🧠', 'Dibujar mapas sencillos 🗺️', 'Resolver acertijos lógicos 🔑', 'Reconocer letras y palabras 🅰️'
+          'Resolver puzzles sencillos 🧩', 'Jugar a los laberintos 🏰', 'Contar historias con más detalles 📖',
+          'Jugar con tarjetas de memoria 🧠', 'Dibujar mapas básicos 🗺️', 'Resolver acertijos simples 🔑', 'Identificar letras y palabras 🅰️'
         ],
         '5': [
-          'Resolver puzzles 🧩', 'Jugar a los laberintos 🏰', 'Contar historias complejas 📖',
-          'Jugar con tarjetas de memoria 🧠', 'Dibujar mapas sencillos 🗺️', 'Resolver acertijos lógicos 🔑', 'Reconocer letras y palabras 🅰️'
+          'Resolver rompecabezas complejos 🧩', 'Jugar a los acertijos matemáticos 🧮', 'Desarrollar habilidades de lógica 🧠',
+          'Crear historias detalladas 📝', 'Jugar con números y estadísticas 📊', 'Estudiar mapas y aprender geografía 🌍', 'Investigar temas de interés 🔍'
         ],
         '6': [
-          'Resolver rompecabezas complejos 🧩', 'Jugar a los acertijos matemáticos 🧮', 'Desarrollar habilidades de lógica 🧠',
-          'Crear historias con detalles 📝', 'Jugar con números y estadísticas 📊', 'Estudiar mapas y aprender geografía 🌍', 'Investigar temas de interés 🔍'
+          'Resolver problemas matemáticos avanzados 🧮', 'Diseñar experimentos científicos 🔬', 'Leer libros de ciencia 📚',
+          'Crear historietas y cuentos gráficos 📝', 'Explorar conceptos de programación 💻', 'Resolver juegos de estrategia ♟️'
         ]
       }
     };
 
-    return actividadesPorEdad[area][edad] || [];
+    return actividadesPorEdad[area]?.[edad] || [];
   }
 
   private obtenerHoraRecomendada(edad: string, area: string): string {
     const horasPorEdadYArea: Record<string, { [key: string]: string }> = {
       'Motricidad': {
-        '3': 'Por la mañana, después de un buen desayuno 🕒',
-        '4': 'Por la mañana, después de un buen desayuno 🕒',
-        '5': 'Por la tarde, antes de la merienda 🕓',
-        '6': 'Al final de la tarde, para gastar energía 🕔'
+        '3': 'Mañana, después del desayuno, cuando hay más energía 🕘',
+        '4': 'Mañana, después del desayuno, ideal para movimiento 🕘',
+        '5': 'Media tarde, para liberar energía antes de la cena 🕓',
+        '6': 'Final de la tarde, ideal para actividades intensas 🕔'
       },
       'Sensorial': {
-        '3': 'Por la mañana, después de un buen desayuno 🕒',
-        '4': 'Por la mañana, después de un buen desayuno 🕒',
-        '5': 'Por la tarde, antes de la merienda 🕓',
-        '6': 'Al final de la tarde, para gastar energía 🕔'
+        '3': 'Mañana, cuando los sentidos están más activos 🕙',
+        '4': 'Media mañana, en un ambiente tranquilo 🕚',
+        '5': 'Tarde, con buena iluminación y sin distracciones 🕒',
+        '6': 'Final de la tarde, para relajarse antes de dormir 🕕'
       },
       'Cognitiva': {
-        '3': 'Por la mañana, cuando están descansados 🕒',
-        '4': 'Al mediodía, después del almuerzo 🕛',
-        '5': 'Al mediodía, después del almuerzo 🕛',
-        '6': 'Por la tarde, para reforzar aprendizajes 🕓'
+        '3': 'Mañana, cuando la mente está más receptiva 🕘',
+        '4': 'Mediodía, después del almuerzo, en un ambiente tranquilo 🕛',
+        '5': 'Tarde, para reforzar lo aprendido en el día 🕓',
+        '6': 'Noche, como una rutina antes de dormir 🕘'
       }
     };
-    console.log(horasPorEdadYArea[area][edad])
+
     return horasPorEdadYArea[area][edad] || 'A cualquier hora del día';
-  }
+}
 
-  private obtenerBeneficios(area: string): string[] {
-    const beneficiosPorArea: Record<string, string[]> = {
-      'Motricidad': [
-        'Mejora la coordinación y el equilibrio 🤸‍♂️',
-        'Fortalece los músculos y huesos 💪',
-        'Fomenta el trabajo en equipo 🤝',
-        'Aumenta la confianza en las habilidades físicas 💥',
-        'Promueve la salud cardiovascular 🏃‍♀️🏃‍♂️'
-      ],
-      'Sensorial': [
-        'Desarrolla la destreza manual ✋',
-        'Fomenta la concentración y paciencia 🧠',
-        'Estimula la creatividad 🎨',
-        'Mejora la destreza visual y el control de los movimientos 👀',
-        'Contribuye a la independencia en tareas cotidianas 🧩'
-      ],
-      'Cognitiva': [
-        'Estimula el pensamiento lógico y crítico 🧠',
-        'Fomenta la resolución de problemas 🔍',
-        'Desarrolla habilidades de memoria y concentración 🧩',
-        'Potencia la creatividad y la innovación 🎨',
-        'Mejora la toma de decisiones y el análisis 🧠'
-      ]
-    };
 
-    return beneficiosPorArea[area] || ['Beneficios generales de desarrollo'];
-  }
+private obtenerBeneficios(area: string): string[] {
+  const beneficiosPorArea: Record<string, string[]> = {
+    'Motricidad': [
+      '💪 **Desarrollo físico:** Mejora la coordinación, el equilibrio y la fuerza muscular.',
+      '🏃‍♂️ **Resistencia y salud:** Favorece la salud cardiovascular y el desarrollo óseo.',
+      '🤹 **Agilidad y precisión:** Mejora la velocidad de reacción y el control corporal.',
+      '🤝 **Trabajo en equipo:** Fomenta la socialización y la cooperación en actividades grupales.',
+      '💥 **Seguridad y confianza:** Aumenta la autoestima al superar desafíos físicos.'
+    ],
+    'Sensorial': [
+      '✋ **Desarrollo táctil:** Mejora la percepción de diferentes texturas y materiales.',
+      '👂 **Agudeza sensorial:** Potencia la discriminación de sonidos, colores y olores.',
+      '🧠 **Concentración y paciencia:** Estimula la atención plena en actividades detalladas.',
+      '🎨 **Creatividad e imaginación:** Promueve la expresión artística y la exploración sensorial.',
+      '🧩 **Autonomía personal:** Contribuye a la independencia en tareas cotidianas.'
+    ],
+    'Cognitiva': [
+      '🧠 **Pensamiento lógico:** Estimula el análisis, la comparación y la resolución de problemas.',
+      '🔍 **Habilidades de memoria:** Refuerza la capacidad de retener y recordar información.',
+      '📖 **Comprensión y lenguaje:** Potencia la comunicación verbal y la lectura.',
+      '🎯 **Toma de decisiones:** Favorece la planificación y la evaluación de opciones.',
+      '🤖 **Innovación y creatividad:** Impulsa la imaginación para desarrollar nuevas ideas.'
+    ]
+  };
+
+  return beneficiosPorArea[area] || ['🌟 Beneficios generales de desarrollo personal y social.'];
+}
+
 
   private obtenerJuegosPorInteres(area: string): string[] {
     const juegos: Record<string, string[]> = {
