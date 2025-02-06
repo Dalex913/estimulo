@@ -147,39 +147,35 @@ export class FormularioDataService {
     return beneficiosPorArea[area] || ['Beneficios generales de desarrollo'];
   }
 
-  private obtenerJuegosPorInteres(interes: string): string[] {
+  private obtenerJuegosPorInteres(area: string): string[] {
     const juegos: Record<string, string[]> = {
-      'Animales': [
-        'https://www.juegosinfantiles.com/juegos-de-animales',
-        'https://www.poki.com/es/juegos/animales',
-        'https://www.minijuegos.com/juegos-de-animales',
-        'https://www.juegoskids.com/juegos-de-animales',
-        'https://www.coolmathgames.com/0-animals'
+      'Motricidad': [
+        'https://www.youtube.com/watch?v=fo5cP3SXqM8&ab_channel=Soydocente%2Cmaestroyprofesor',
+        'https://www.youtube.com/watch?v=nMGMjR784ag',
+        'https://www.youtube.com/watch?v=LNzrq9pHI0w&ab_channel=PlayKidsEspa%C3%B1o',
+        'https://www.youtube.com/watch?v=trvcgXYTUbU&ab_channel=ManualidadesPlay'
+
       ],
-      'Música': [
-        'https://www.pianu.com/',
-        'https://www.classicsforkids.com/games.html',
-        'https://www.musictechteacher.com/music_quizzes.htm',
-        'https://www.sibelius.com/documents/education/musicalgames/',
-        'https://www.virtualpiano.net/'
+      'Sensorial': [
+        'https://v4.brainhq.com/?signup=success&fr=y#subscribe/browse',
+        'https://www.youtube.com/watch?v=xPxHz1gL76I&ab_channel=InfantilAlbanta',
+        'https://v4.brainhq.com/?signup=success&fr=y#subscribe/browse',
+        'https://www.cokitos.com/decipher-descifrar-un-mensaje-en-clave/play/'
       ],
-      'Arte': [
-        'https://www.kidsart.com/',
-        'https://www.artforkidshub.com/',
-        'https://www.drawsofa.com/',
-        'https://www.coolmathgames.com/0-art',
-        'https://www.tate.org.uk/kids'
+      'Cognitiva': [
+        'https://www.abcya.com/games/alphabet',
+        'https://www.abcya.com/games/alphabet_puzzle',
+        'https://www.youtube.com/watch?v=nXvuji6-mJc&ab_channel=CasitaPreescolar'
+
       ],
-      'Deportes': [
-        'https://www.juegosdeportes.com/',
-        'https://www.minijuegos.com/juegos-de-deportes',
-        'https://www.poki.com/es/juegos/deportes',
-        'https://www.coolmathgames.com/0-sports',
-        'https://www.fog.com/game/soccer'
+      'Relajación': [
+        'https://www.youtube.com/watch?v=o9uaRmHiAwc&ab_channel=SmileandLearn-Espa%C3%B1ol',
+        'https://www.youtube.com/watch?v=t8748OWc1nQ&ab_channel=SmileandLearn-Espa%C3%B1ol'
       ]
+      
     };
 
-    return juegos[interes] || [];
+    return juegos[area] || [];
   }
 
 

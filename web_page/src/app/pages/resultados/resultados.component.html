@@ -1,8 +1,24 @@
+
+<div class="mt-24 bg-gray-50 px-2 py-5">
+  <article class="mx-auto my-10 flex max-w-md flex-col rounded-2xl bg-white px-4 shadow md:max-w-5xl md:flex-row md:items-center">
+    <div class="shrink-0 my-4 md:mr-8 md:max-w-sm">
+      <img class="rounded-2xl" src="https://cdn-icons-gif.flaticon.com/8721/8721062.gif" alt="" />
+    </div>
+    <div class="py-4 sm:py-8">
+      <a href="#" class="mb-6 block text-3xl font-medium text-teal-500">Recordatorios</a>
+      <p class="mb-6 text-black text-xl">📌 Completar los niveles pasando un día o dos días para evitar que el niño se sienta abrumado o estresado, causando un efecto contrario al esperado.<br> 📌En caso de estar en la escuela, hacer las actividades los días en que lo niños no tengan una sobrecarga de tareas de la escuela para no influir en su rendimiento académico.<br> 📌Disfruta de las actividades junto con tus hijos para obtener un mejor resultado.</p>
+    </div>
+  </article>
+</div>
+
 <section *ngIf="recomendaciones">
   <div class="font-[sans-serif] text-[#333] px-6">
     <div class="mb-8 flex flex-col items-center justify-center">
       <div class="mt-24 bg-white rounded-full p-6 text-center">
-        <h1 class="mt-8 text-4xl font-bold text-blue-600 mb-4">😲😲¡Sorpresa {{ recomendaciones.nino }}!😲😲</h1>
+        <div class="bg-red-100 rounded-full px-5 py-5">
+          <p class="text-black text-xl">🌎 Cumplir con las dos actividades con paciencia y al ritmo del niño. </p>
+        </div>
+        <h1 class=" mt-8 text-4xl font-bold text-blue-600 mb-4">😲😲¡Sorpresa {{ recomendaciones.nino }}!😲😲</h1>
         <p class="text-2xl">
           Estas son las recomendaciones fueron creadas por <strong>{{ recomendaciones.padre }}</strong>.
         </p>
@@ -41,15 +57,14 @@
         <div class="md:max-w-md w-full py-4">
           <div class="mr-2 py-5 px-8">
             <h2 class="mb-4 text-4xl font-medium">🎮 Juegos <span class="text-violet-600">Recomendadas</span></h2>
-            <p class="mb-6">Explora nuestra selección de juegos y elige la opción que más te divierta. ¡La diversión te
-              espera!</p>
+            <p class="mb-6">Explora nuestra selección de juegos y xompleta de el nivel más facil al mas difícil</p>
             <div class="mb-4 space-y-4">
               <div class="flex space-x-2">
                 <ul class="grid grid-cols-2 gap-4">
                   <li *ngFor="let juego of recomendaciones.juegos; let i = index" class="mb-4">
                     <button (click)="irAlJuego(juego)"
                       class="px-6 py-3 bg-violet-200 rounded-full text-lg text-gray-700 hover:bg-violet-300 focus:outline-none">
-                      Opción {{ i + 1 }}
+                      Nivel {{ i + 1 }}
                     </button>
                   </li>
                 </ul>
