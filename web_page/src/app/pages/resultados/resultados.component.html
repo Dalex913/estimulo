@@ -1,16 +1,19 @@
-
 <div class="mt-24 bg-gray-50 px-2 py-5">
-  <article class="mx-auto my-10 flex max-w-md flex-col rounded-2xl bg-white px-4 shadow md:max-w-5xl md:flex-row md:items-center">
+  <article
+    class="mx-auto my-10 flex max-w-md flex-col rounded-2xl bg-white px-4 shadow md:max-w-5xl md:flex-row md:items-center">
     <div class="shrink-0 my-4 md:mr-8 md:max-w-sm">
       <img class="rounded-2xl" src="https://cdn-icons-gif.flaticon.com/8721/8721062.gif" alt="" />
     </div>
     <div class="py-4 sm:py-8">
       <a href="#" class="mb-6 block text-3xl font-medium text-teal-500">Recordatorios</a>
-      <p class="mb-6 text-black text-xl">📌 Completar los niveles pasando un día o dos días para evitar que el niño se sienta abrumado o estresado, causando un efecto contrario al esperado.<br> 📌En caso de estar en la escuela, hacer las actividades los días en que lo niños no tengan una sobrecarga de tareas de la escuela para no influir en su rendimiento académico.<br> 📌Disfruta de las actividades junto con tus hijos para obtener un mejor resultado.</p>
+      <p class="mb-6 text-black text-xl">📌 Completar los niveles pasando un día o dos días para evitar que el niño se
+        sienta abrumado o estresado, causando un efecto contrario al esperado.<br> 📌En caso de estar en la escuela,
+        hacer las actividades los días en que lo niños no tengan una sobrecarga de tareas de la escuela para no influir
+        en su rendimiento académico.<br> 📌Disfruta de las actividades junto con tus hijos para obtener un mejor
+        resultado.</p>
     </div>
   </article>
 </div>
-
 <section *ngIf="recomendaciones">
   <div class="font-[sans-serif] text-[#333] px-6">
     <div class="mb-8 flex flex-col items-center justify-center">
@@ -23,8 +26,45 @@
           Estas son las recomendaciones fueron creadas por <strong>{{ recomendaciones.padre }}</strong>.
         </p>
       </div>
+      <div class="font-[sans-serif] text-[#333] px-6">
+        <div class="mb-8 flex flex-col items-center justify-center">
+          <div
+            class="grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl  border-4 border-violet-200 bg-white">
+            <div class="md:max-w-md w-full py-4">
+              <div class="mr-2 py-5 px-8">
+                <h2 class="mb-4 text-4xl font-medium">🎮 ¡Bienvenido a la <span class="text-violet-600">sección de
+                    juegos!</span></h2>
+                <p class="mb-2">Sigue estos pasos para jugar y avanzar de nivel:</p><br>
+                <p class="text-black text-justify"><b>1️⃣Elige un juego: </b> En cada nivel encontrarás un enlace o una
+                  página con un juego divertido. <br>
+                  <b>2️⃣ Supera el desafío: </b> Juega y trata de completar el nivel. ¡Cada vez será un poco más
+                  difícil!. <br>
+                  <b>3️⃣ Avanza al siguiente nivel: </b> Cuando termines, busca el enlace al siguiente nivel y sigue
+                  jugando. <br>
+                  <b>2️⃣ Llega hasta el final: </b> ¿Podrás completar todos los niveles? ¡Demuestra tu habilidad y
+                  diviértete! 🎮🚀
+                </p>
+                <div class="mb-4 space-y-4">
+                  <div class="flex space-x-2">
+                    <ul class="grid grid-cols-2 gap-4">
+                      <li *ngFor="let juego of recomendaciones.juegos; let i = index" class="mb-4">
+                        <button (click)="irAlJuego(juego)"
+                          class="px-6 py-3 bg-violet-200 rounded-full text-lg text-gray-700 hover:bg-violet-300 focus:outline-none">
+                          Nivel {{ i + 1 }}
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img src="https://aulavirtualmoodle.uleam.edu.ec/pluginfile.php/371186/course/overviewfiles/payana.gif"
+              alt="login-image" class="w-120 h-100 rounded-xl lg:w-140 lg:h-140" />
+          </div>
+        </div>
+      </div>
       <div
-        class="mt-24 grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl border-4 border-sky-200 bg-white">
+        class="mt-5 grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl border-4 border-sky-200 bg-white">
         <div class=" mt-5 md:max-w-md w-full py-4">
           <div class="mr-2 py-5 px-8">
             <h2 class="mb-4 text-4xl font-medium">🎨 Actividades <span class="text-blue-600">Recomendadas</span></h2>
@@ -50,33 +90,6 @@
       </div>
     </div>
   </div>
-  <div class="font-[sans-serif] text-[#333] px-6">
-    <div class="mb-8 flex flex-col items-center justify-center">
-      <div
-        class="grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl  border-4 border-violet-200 bg-white">
-        <div class="md:max-w-md w-full py-4">
-          <div class="mr-2 py-5 px-8">
-            <h2 class="mb-4 text-4xl font-medium">🎮 Juegos <span class="text-violet-600">Recomendadas</span></h2>
-            <p class="mb-6">Explora nuestra selección de juegos y xompleta de el nivel más facil al mas difícil</p>
-            <div class="mb-4 space-y-4">
-              <div class="flex space-x-2">
-                <ul class="grid grid-cols-2 gap-4">
-                  <li *ngFor="let juego of recomendaciones.juegos; let i = index" class="mb-4">
-                    <button (click)="irAlJuego(juego)"
-                      class="px-6 py-3 bg-violet-200 rounded-full text-lg text-gray-700 hover:bg-violet-300 focus:outline-none">
-                      Nivel {{ i + 1 }}
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img src="https://aulavirtualmoodle.uleam.edu.ec/pluginfile.php/371186/course/overviewfiles/payana.gif"
-          alt="login-image" class="w-120 h-100 rounded-xl lg:w-140 lg:h-140" />
-      </div>
-    </div>
-  </div>
   <div class="font-[sans-serif] text-[#333] bg-white px-6">
     <div class="flex flex-col items-center justify-center">
       <div class="max-w-6xl w-full p-4 shadow-md rounded-xl border-4 border-yellow-200 bg-white">
@@ -96,27 +109,7 @@
       </div>
     </div>
   </div>
-  <div class="font-[sans-serif] text-[#333] px-6 ">
-    <div class="mt-8 flex flex-col items-center justify-center">
-      <div
-        class="grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl border-4 border-orange-200 bg-white">
-        <div class="mt-2 md:max-w-md w-full py-4">
-          <div class="mr-2 py-5 px-8">
-            <h2 class="mb-4 text-4xl font-medium">⏰ Hora recomendada<span class="text-orange-600"> para actividad</span>
-            </h2>
-            <div class="mb-4 space-y-4">
-              <div class="flex space-x-2">
-                {{ recomendaciones.horaRecomendada }}
-              </div>
-            </div>
-          </div>
-        </div>
-        <img src="https://cdn-icons-gif.flaticon.com/10282/10282564.gif" alt="login-image"
-          class="ml-20 w-60 h-60 rounded-xl lg:w-140 lg:h-140" />
-      </div>
-    </div>
-  </div>
-  <div class="font-[sans-serif] text-[#333]px-6">
+  <div class="mt-5 font-[sans-serif] text-[#333]px-6">
     <div class="mb-8 flex flex-col items-center justify-center">
       <div
         class="grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl border-4  border-pink-200 bg-white">

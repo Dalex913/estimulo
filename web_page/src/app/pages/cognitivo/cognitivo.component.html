@@ -27,48 +27,63 @@
                     habilidades de resolución de problemas.<br>⚡Fomentan el pensamiento crítico y la creatividad.</p>
             </div>
             <div>
-                <p class="mb-6 border-l-4 border-violet-400 pl-4 text-2xl leading-10 font-semibold">Actividades
+                <p class="mb-4 border-l-4 border-violet-400 pl-4 text-2xl leading-10 font-semibold">Actividades
                     Sugeridas</p>
                 <p class="text-lg ttext-black text-justify"><b>✨Rompecabezas:</b> Resolver puzzles adecuados a la edad
                     para
-                    estimular la lógica y la concentración.<br>
+                    estimular la lógica y la concentración.<br><a
+                        href="https://www.cokitos.com/puzzles-online-regresos-a-las-clases/play/" target="_blank"
+                        class="text-blue-600 underline">
+                        Juego rompecabezas (3-4 años)
+                    </a>
+                    <br><a href="https://www.cokitos.com/puzzles-en-el-zoo/play/" target="_blank"
+                        class="text-blue-600 underline">
+                        Juego rompecabezas (5-6 años)
+                    </a>
+                    <br><br>
                     <b>✨Juegos de Memoria:</b> Utilizar cartas o imágenes para juegos que desafíen la memoria
-                    visual.<br>
-                    <b>✨Clasificación de Objetos:</b> Pedir a los niños que agrupen objetos según características
-                    específicas
-                    (color, forma, tamaño).
+                    visual.
+                    <br><a href="https://www.cokitos.com/buscar-parejas-de-animales/play/" target="_blank"
+                        class="text-blue-600 underline">
+                        Buscar parejas animales
+                    </a>
                 </p>
             </div>
             <div>
-                <p class="mb-6 border-l-4 border-violet-400 pl-4 text-2xl leading-10 font-semibold">Juego Relacionado
+                <p class="mb-6 border-l-4 border-violet-400 pl-4 text-2xl leading-10 font-semibold">💎</p>
+                <p class="text-lg ttext-black text-justify">
+                    <b>✨Clasificación de Objetos:</b> Pedir a los niños que agrupen objetos según características
+                    específicas
+                    (color, forma, tamaño).
+                    <br><a href="https://www.cokitos.com/clasificar-las-probetas-de-colores/play/" target="_blank"
+                        class="text-blue-600 underline">
+                        Clasificacion probetas de colores
+                    </a>
                 </p>
-
-                <a href="https://www.abcya.com/games/alphabet" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/5930/5930147.png"
-                        alt="Imagen del juego" class="mb-4 w-40 mx-auto">
-                </a>
-
-                <a href="https://www.abcya.com/games/alphabet" target="_blank"
-                    class="flex items-center justify-center bg-violet-400 text-white p-4 rounded-lg hover:bg-violet-600">
-                    <i class="fas fa-paint-brush mr-2"></i> Jugar
-                </a>
-
             </div>
         </div>
     </div>
 </section>
-<div class="flex items-center justify-center mx-auto my-8 p-6 bg-white" *ngIf="!loading; else loadingTemplate">
+<div class="flex flex-col items-center justify-center mx-auto my-8 p-6 bg-white relative"
+    *ngIf="!loading; else loadingTemplate">
+    <h1
+        class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-text drop-shadow-lg text-center">
+        🎨 Si deseas empezar con la estimulación 🚀
+    </h1>
+    <div class="absolute top-10 left-10 text-6xl text-blue-400 opacity-70 animate-pulse animate-float">🟢</div>
+    <div class="absolute top-20 right-20 text-6xl text-purple-400 opacity-60 animate-pulse animate-float">🔵</div>
+    <div class="absolute bottom-20 left-32 text-5xl text-pink-400 opacity-70 animate-pulse animate-float">🟠</div>
     <a (click)="reenviar()"
-        class="relative inline-block p-8 px-12 py-5 overflow-hidden font-medium text-indigo-600 rounded-lg shadow-2xl group">
+        class="relative mt-10 inline-block px-12 py-5 overflow-hidden font-medium text-white bg-indigo-600 rounded-lg shadow-2xl group ">
         <span
             class="absolute top-0 left-0 w-48 h-48 -mt-10 -ml-6 transition-all duration-700 bg-red-500 rounded-full blur-md ease"></span>
         <span class="absolute inset-0 w-full h-full transition duration-700 group-hover:rotate-180 ease">
             <span class="absolute bottom-0 left-0 w-32 h-32 -ml-12 bg-purple-500 rounded-full blur-md"></span>
             <span class="absolute bottom-0 right-0 w-32 h-32 -mr-12 bg-pink-500 rounded-full blur-md"></span>
         </span>
-        <span class="relative text-white">Descubrir</span>
+        <span class="relative text-lg font-semibold">Click aquí</span>
     </a>
 </div>
 <ng-template #loadingTemplate>
     <app-loading></app-loading>
-  </ng-template>
+</ng-template>

@@ -123,25 +123,25 @@ export class FormularioDataService {
 private obtenerBeneficios(area: string): string[] {
   const beneficiosPorArea: Record<string, string[]> = {
     'Motricidad': [
-      '💪 **Desarrollo físico:** Mejora la coordinación, el equilibrio y la fuerza muscular.',
-      '🏃‍♂️ **Resistencia y salud:** Favorece la salud cardiovascular y el desarrollo óseo.',
-      '🤹 **Agilidad y precisión:** Mejora la velocidad de reacción y el control corporal.',
-      '🤝 **Trabajo en equipo:** Fomenta la socialización y la cooperación en actividades grupales.',
-      '💥 **Seguridad y confianza:** Aumenta la autoestima al superar desafíos físicos.'
+      'Mejora la coordinación, el equilibrio y la fuerza muscular.💪',
+      'Favorece la salud cardiovascular y el desarrollo óseo.🏃‍♂️',
+      'Mejora la velocidad de reacción y el control corporal.🤹',
+      'Fomenta la socialización y la cooperación en actividades grupales.🤝',
+      'Aumenta la autoestima al superar desafíos físicos.💥'
     ],
     'Sensorial': [
-      '✋ **Desarrollo táctil:** Mejora la percepción de diferentes texturas y materiales.',
-      '👂 **Agudeza sensorial:** Potencia la discriminación de sonidos, colores y olores.',
-      '🧠 **Concentración y paciencia:** Estimula la atención plena en actividades detalladas.',
-      '🎨 **Creatividad e imaginación:** Promueve la expresión artística y la exploración sensorial.',
-      '🧩 **Autonomía personal:** Contribuye a la independencia en tareas cotidianas.'
+      'Mejora la percepción de diferentes texturas y materiales.✋',
+      'Potencia la discriminación de sonidos, colores y olores.👂',
+      'Estimula la atención plena en actividades detalladas.🧠',
+      'Promueve la expresión artística y la exploración sensorial.🎨',
+      'Contribuye a la independencia en tareas cotidianas.🧩'
     ],
     'Cognitiva': [
-      '🧠 **Pensamiento lógico:** Estimula el análisis, la comparación y la resolución de problemas.',
-      '🔍 **Habilidades de memoria:** Refuerza la capacidad de retener y recordar información.',
-      '📖 **Comprensión y lenguaje:** Potencia la comunicación verbal y la lectura.',
-      '🎯 **Toma de decisiones:** Favorece la planificación y la evaluación de opciones.',
-      '🤖 **Innovación y creatividad:** Impulsa la imaginación para desarrollar nuevas ideas.'
+      'Estimula el análisis, la comparación y la resolución de problemas.🧠',
+      'Refuerza la capacidad de retener y recordar información.🔍',
+      'Potencia la comunicación verbal y la lectura.📖',
+      'Favorece la planificación y la evaluación de opciones.🎯',
+      'Impulsa la imaginación para desarrollar nuevas ideas.🤖'
     ]
   };
 
@@ -156,7 +156,6 @@ private obtenerBeneficios(area: string): string[] {
         'https://www.youtube.com/watch?v=nMGMjR784ag',
         'https://www.youtube.com/watch?v=LNzrq9pHI0w&ab_channel=PlayKidsEspa%C3%B1o',
         'https://www.youtube.com/watch?v=trvcgXYTUbU&ab_channel=ManualidadesPlay'
-
       ],
       'Sensorial': [
         'https://v4.brainhq.com/?signup=success&fr=y#subscribe/browse',

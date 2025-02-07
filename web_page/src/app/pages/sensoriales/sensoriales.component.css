@@ -27,3 +27,37 @@
 .fade-in-left {
     animation: fadeInLeft 1s ease-out forwards;
 }
+
+@keyframes fly {
+    0% { transform: translateX(-100px) translateY(-50px) rotate(-15deg); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(100px) translateY(50px) rotate(10deg); }
+}
+
+.plane {
+    animation: fly 3s ease-in-out infinite alternate;
+}
+
+/* Animación de burbujas flotantes */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+.bubble {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Fondo animado */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    background: linear-gradient(45deg, #4f46e5, #ec4899, #facc15);
+    background-size: 300% 300%;
+    animation: gradientMove 6s ease infinite;
+}
