@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 export class FormularioComponent {
   loading: boolean = false;
   edadOpciones = ['3 años', '4 años', '5 años', '6 años'];
-  areasDesarrolloOpciones = ['Cognitiva','Sensorial','Motricidad'];
+  areasDesarrolloOpciones = ['Cognitiva','Sensorial','Motricidad', 'Relajación'];
   interesesOpciones = ['Animales', 'Música', 'Arte', 'Deportes'];
 
   seleccion = {
@@ -51,6 +51,8 @@ export class FormularioComponent {
         return 'Motricidad';
       case 'Sensorial':
         return 'Sensorial';
+      case 'Relajación':
+        return 'Relajacion';
       default:
         return '';
     }

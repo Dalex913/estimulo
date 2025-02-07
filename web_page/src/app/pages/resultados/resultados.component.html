@@ -26,68 +26,55 @@
           Estas son las recomendaciones fueron creadas por <strong>{{ recomendaciones.padre }}</strong>.
         </p>
       </div>
-      <div class="font-[sans-serif] text-[#333] px-6">
-        <div class="mb-8 flex flex-col items-center justify-center">
-          <div
-            class="grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl  border-4 border-violet-200 bg-white">
-            <div class="md:max-w-md w-full py-4">
-              <div class="mr-2 py-5 px-8">
-                <h2 class="mb-4 text-4xl font-medium">🎮 ¡Bienvenido a la <span class="text-violet-600">sección de
-                    juegos!</span></h2>
-                <p class="mb-2">Sigue estos pasos para jugar y avanzar de nivel:</p><br>
-                <p class="text-black text-justify"><b>1️⃣Elige un juego: </b> En cada nivel encontrarás un enlace o una
-                  página con un juego divertido. <br>
-                  <b>2️⃣ Supera el desafío: </b> Juega y trata de completar el nivel. ¡Cada vez será un poco más
-                  difícil!. <br>
-                  <b>3️⃣ Avanza al siguiente nivel: </b> Cuando termines, busca el enlace al siguiente nivel y sigue
-                  jugando. <br>
-                  <b>2️⃣ Llega hasta el final: </b> ¿Podrás completar todos los niveles? ¡Demuestra tu habilidad y
-                  diviértete! 🎮🚀
-                </p>
-                <div class="mb-4 space-y-4">
-                  <div class="flex space-x-2">
-                    <ul class="grid grid-cols-2 gap-4">
-                      <li *ngFor="let juego of recomendaciones.juegos; let i = index" class="mb-4">
-                        <button (click)="irAlJuego(juego)"
-                          class="px-6 py-3 bg-violet-200 rounded-full text-lg text-gray-700 hover:bg-violet-300 focus:outline-none">
-                          Nivel {{ i + 1 }}
-                        </button>
-                      </li>
-                    </ul>
+      <section *ngIf="recomendaciones" class="py-8 bg-[url('https://example.com/repeating-background.png')] bg-repeat">
+        <div class="container mx-auto">
+          <!-- Contenedor general centrado -->
+          <div class="mb-8 flex flex-col items-center justify-center">
+            <!-- Se itera sobre cada juego (nivel) -->
+            <div *ngFor="let juego of recomendaciones?.juegos; let i = index"
+              class="grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-6 m-4 shadow-md rounded-xl border-4 border-violet-200 bg-white">
+
+              <!-- Sección de información y botones -->
+              <div class="md:max-w-md w-full py-4">
+                <div class="px-8">
+                  <!-- Título con el nivel (centrado) -->
+                  <h2 class="mb-4 text-4xl font-medium text-center">
+                    🎮 ¡<span class="text-violet-600"> {{ juego.nivel }}</span>!
+                  </h2>
+                  <!-- Descripción del nivel -->
+                  <p class="mb-2 text-center">
+                    Descripción del Nivel {{ juego.nivel }}:
+                  </p>
+                  <p class="my-2 text-black text-justify mb-4" [innerHTML]="formatDescription(juego.descripcion)">
+                  </p>
+                  <!-- Botones para Actividad 1 y Actividad 2 -->
+                  <div class="flex justify-center space-x-6 mb-4">
+                    <button (click)="irAlJuego(juego.actividad1)"
+                      class="px-6 py-3 bg-violet-200 rounded-full text-lg text-gray-700 hover:bg-violet-300 transition focus:outline-none">
+                      Actividad 1
+                    </button>
+                    <button (click)="irAlJuego(juego.actividad2)"
+                      class="px-6 py-3 bg-violet-200 rounded-full text-lg text-gray-700 hover:bg-violet-300 transition focus:outline-none">
+                      Actividad 2
+                    </button>
+                  </div>
+                  <!-- Materiales (opcional) -->
+                  <div *ngIf="juego.materiales" class="text-sm text-gray-600 text-center">
+                    <strong>Materiales:</strong> {{ juego.materiales }}
                   </div>
                 </div>
               </div>
-            </div>
-            <img src="https://aulavirtualmoodle.uleam.edu.ec/pluginfile.php/371186/course/overviewfiles/payana.gif"
-              alt="login-image" class="w-120 h-100 rounded-xl lg:w-140 lg:h-140" />
-          </div>
-        </div>
-      </div>
-      <div
-        class="mt-5 grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl border-4 border-sky-200 bg-white">
-        <div class=" mt-5 md:max-w-md w-full py-4">
-          <div class="mr-2 py-5 px-8">
-            <h2 class="mb-4 text-4xl font-medium">🎨 Actividades <span class="text-blue-600">Recomendadas</span></h2>
-            <p class="mb-6">Te presentamos esta lista de recomendaciones. Elige la que mejor se ajuste a tus
-              necesidades.</p>
-            <div class="mb-4 space-y-4">
-              <div *ngFor="let actividad of recomendaciones.actividades" class="flex space-x-2">
-                <span class="text-blue-400">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="h-6 w-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z">
-                    </path>
-                  </svg>
-                </span>
-                <span class="font-medium text-lg">{{ actividad }}</span>
+
+              <!-- Imagen decorativa, seleccionada del array según el índice -->
+              <div class="flex justify-center">
+                <img [src]="imagenesDecorativas[i % imagenesDecorativas.length]" alt="Imagen decorativa"
+                  class="w-120 h-100 rounded-xl lg:w-140 lg:h-140" />
               </div>
+
             </div>
           </div>
         </div>
-        <img src="https://i.pinimg.com/originals/a5/98/d4/a598d4fc4118f5ea0cb49e2c9a34524d.gif" alt="login-image"
-          class="w-120 h-100 rounded-xl lg:w-140 lg:h-140" />
-      </div>
+      </section>
     </div>
   </div>
   <div class="font-[sans-serif] text-[#333] bg-white px-6">
