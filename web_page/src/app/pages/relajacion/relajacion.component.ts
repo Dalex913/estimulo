@@ -13,7 +13,7 @@ export class RelajacionComponent {
   reenviar() {
     this.loading = true;
     setTimeout(() => {
-      this.router.navigate(['/formulario']);
+      this.router.navigate(['/form-relajacion']);
       this.loading = false;
     }, 2500);
   }

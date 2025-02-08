@@ -185,67 +185,67 @@ private obtenerJuegosPorInteres(edad: string, area: string): { descripcion?: str
       'Sensorial': [
         {
           nivel: 'Nivel 1',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\nMariposas (Vista) \nPiano (oír)',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\n\n ⚡**Actividad 1:** Observa la mariposa (estimula el sentido de la vista) \n\n ⚡**Actividad 2:** Toca el piano y crea ritmos (estimula el sentido del oído)',
           actividad1: 'https://v4.brainhq.com/?signup=success&fr=y#subscribe/browse',
           actividad2: 'https://musiclab.chromeexperiments.com/Song-Maker/',
           materiales:''
         },
         {
           nivel: 'Nivel 2',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\nAves (Vista) \nVideo (tacto)',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\n\n ⚡**Actividad 1:** Observa el ave (estimula el sentido de la vista) \n\n ⚡**Actividad 2:** Adivina el objeto (estimula el sentido del tacto)',
           actividad1: 'https://v4.brainhq.com/?signup=success&fr=y#subscribe/browse',
           actividad2: 'https://www.youtube.com/watch?v=xPxHz1gL76I&ab_channel=InfantilAlbanta',
-          materiales:'En una bolsa de tela o una funda negra colocar 5 juegutes que más use o le guste al niño y otros 5 de objetos que use a diario el niño (cuchara, borrador, etc). El niño debe sacar un objeto de la bolsa y adivinar qué es con lo ojos vendados '
+          materiales:'En una bolsa de tela o en una funda negra, colocar 5 juguetes que más use o le guste al niño o niña, y otros 5 de objetos que use a diario el niño (cuchara, borrador, etc). El niño debe sacar un objeto de la bolsa y adivinar qué es con los ojos vendados.'
         },
         {
           nivel: 'Nivel 3',
-          descripcion:'Ambas actividades requieren que el niño o niña esté tapado por ojos\n🐬Estimulación del gusto: con una cuchara hacerle probar al niño distintos sabores de alimetos que tenga en la casa (azúcar, café, sal, jugo, mermelada, chocolate) que sean de consistencia líquida.\n🐬Estimulación del olfato: hacerle oler olores agradables como las plantas medicinales, clavo de olor, canela, vainilla, cítricos, etc. \n🐥Adivinar 5-10 sabores',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\n Ambas actividades requieren que el niño o niña esté tapado por ojos \n\n ⚡ **Actividad 1:** Adivina, adivina ¿qué hay en tu boquita? (estimula el sentido del gusto) \nCon una cuchara hacerle probar al niño distintos sabores de alimetos que tenga en la casa (azúcar, café, sal, jugo, mermelada, chocolate) que sean de consistencia líquida. \n\n ⚡ **Actividad 2:** Adivina el objeto (estimula el sentido del tacto) \n🔥 Hacerle oler olores agradables como las plantas medicinales, clavo de olor, canela, vainilla, cítricos, etc.',
           actividad1: 'https://www.youtube.com/watch?v=Ycuvrz9huR8&ab_channel=Mam%C3%A1Montessori',
           actividad2: 'https://www.youtube.com/watch?v=AytUupIwPc8&ab_channel=KidsIntegralEstimulaci%C3%B3nTemprana',
-          materiales:''
+          materiales:'Adivinar 5 - 10 olores '
         }
       ],
       'Motricidad': [
         {
           nivel: 'Nivel 1',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal, mediante 3 ejercicios\n Plastilina (Motricidad fina)\nCintas(Motricidad gruesa)',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal.\n\n ⚡**Actividad 1:** Dibujos con plastilina (motricidad fina)\n\n ⚡**Actividad 2:** Toca las cintas (motricidad gruesa)',
           actividad1: 'https://www.youtube.com/watch?v=fo5cP3SXqM8',
           actividad2: 'https://www.youtube.com/watch?v=gORn1E8ez9w',
-          materiales:'Materiales: Con una cinta, lana o algo similar que tenga de largo 2 metros y amarrar cada extremos a una silla, luego amarrar 4 cintas o medias de diferentes colores. El padre le va a decir qué colores debe tocar el niño o niña con el pie, (ejemplos: amarillo, azul, amarillo, rosado)'
+          materiales:'Con una cinta, lana o algo similar, de 2 metros de largo. Amarrar cada extremos del material que dispone a una silla, luego amarrar 4 cintas o medias de diferentes colores. El padre le va a decir qué colores debe tocar el niño o niña con el pie, (ejemplos: amarillo, azul, amarillo, rosado), 🔥 Ejercicio 1: 4 colores , 🔥 Ejercicios 2: 5 colores y 🔥Ejercicio 3: 6 colores '
         },
         {
           nivel: 'Nivel 2',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\n (Actividad 1) Hacer 6 bolitas de papel de diferentes 4 colores diferentes, luego el niño con uns pinza de ropa las va a clasificar por colores, puede usar una tapa o recipiente para colocarlas - (Motricidad fina) \n (Actividad 2) Ejercicio 1: encestar la pelota en una tina, canasta o lo más similar que tenga a una canasta. Encestar 3 veces cuando la canasta está a un metro, luego encestar 3 veces a metro y medio - (Motricidad gruesa)',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal.\n\n ⚡**Actividad 1:** Pinzas y bolitas (motricidad fina) \n\n ⚡**Actividad 2:** Atrapa la pelota (motricidad gruesa))\n Encestar la pelota en una tina, canasta o lo más similar que tenga a una canasta. Encestar 3 veces cuando la canasta está a un metro, luego encestar 3 veces a metro y medio',
           actividad1: 'https://www.youtube.com/watch?v=nMGMjR784ag&ab_channel=SOSTerapeutas',
           actividad2: 'https://www.youtube.com/watch?v=go8LzrjZa1s&ab_channel=UNICEFBolivia',
-          materiales:''
+          materiales:'Hacer 6 bolitas de papel de diferentes 4 colores diferentes, luego el niño con uns pinza de ropa las va a clasificar por colores, puede usar una tapa o recipiente para colocarlas'
         },
         {
           nivel: 'Nivel 3',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal\n Saltos (Motricidad gruesa)\n Enrollando frutas',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal.\n\n ⚡**Actividad 1:** Enrolla a las frutas (motricidad fina)\n\n ⚡**Actividad 2:** Baile con saltos (motricidad gruesa)',
           actividad1: 'https://www.youtube.com/watch?v=LNzrq9pHI0w&ab_channel=PlayKidsEspa%C3%B1ol',
           actividad2: 'https://www.youtube.com/watch?v=h3X1BP-z8Nw&ab_channel=ConMami',
-          materiales:'Elegir 2 frutas y en un cartón el padre dibujará la forma de la fruta para luego darle al niño  que con lana las enrollo hasta tapar el cartón y luego con cartulina pegar la hoja de la fruta, en caso de que tenga. '
+          materiales:'Elegir 2 frutas y en un cartón el padre dibujará la forma de la fruta para luego darle al niño  que con lana las enrollo hasta tapar el cartón y luego con cartulina pegar la hoja de la fruta, en caso de que tenga.'
         }
       ],
       'Cognitiva': [
         {
           nivel: 'Nivel 1',
-          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n (Alfabeto) \n (Objeto que encaja)',
+          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n\n ⚡**Actividad 1:** Ordenar el alfabeto \n\n  ⚡**Actividad 2:** ¿Qué objeto encaja?',
           actividad1: 'https://www.abcya.com/games/alphabet ',
           actividad2: 'https://www.cokitos.com/que-objeto-encaja/play/',
           materiales:''
         },
         {
           nivel: 'Nivel 2',
-          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n (Rompecabezas) \n (Contar animales)',
+          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n\n ⚡**Actividad 1:** Armar el rompecabezas \n\n  ⚡**Actividad 2:** Cuenta los animales',
           actividad1: 'https://www.abcya.com/games/alphabet_puzzle',
           actividad2: 'https://www.cokitos.com/contar-animales-hasta-10/play/',
           materiales:''
         },
         {
           nivel: 'Nivel 3',
-          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n (Patrón) \n (Clasificar por figuras geométricas)',
+          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n\n ⚡**Actividad 1:** Completa el patrón y secuencias \n\n  ⚡**Actividad 2:** Clasifica el objeto según su forma',
           actividad1: 'https://www.youtube.com/watch?v=nXvuji6-mJc&ab_channel=CasitaPreescolar',
           actividad2: 'https://wordwall.net/es/resource/14264627/figuras-geometricas',
           materiales:''
@@ -254,7 +254,7 @@ private obtenerJuegosPorInteres(edad: string, area: string): { descripcion?: str
       'Relajacion': [
         {
           nivel: 'Nivel 1',
-          descripcion:'🐬 En este nivel, el objetivo es ayudarte a relajarte y reducir el estrés a través de actividades calmantes. \nObservar el video desde el min 0:35',
+          descripcion:'🐬 En este nivel, el objetivo es ayudarte a relajarte y reducir el estrés a través de actividades calmantes. \n\n ⚡Observar el video desde el min 0:35',
           actividad1: 'https://www.youtube.com/watch?v=o9uaRmHiAwc&ab_channel=SmileandLearn-Espa%C3%B1ol',
           actividad2: '',
           materiales:''
@@ -279,67 +279,67 @@ private obtenerJuegosPorInteres(edad: string, area: string): { descripcion?: str
       'Sensorial': [
         {
           nivel: 'Nivel 1',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\nMariposas (Vista) \nPiano (oír)',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\n\n ⚡**Actividad 1:** Observa la mariposa (estimula el sentido de la vista) \n\n ⚡**Actividad 2:** Toca el piano y crea ritmos (estimula el sentido del oído)',
           actividad1: 'https://v4.brainhq.com/?signup=success&fr=y#subscribe/browse',
           actividad2: 'https://musiclab.chromeexperiments.com/Song-Maker/',
           materiales:''
         },
         {
           nivel: 'Nivel 2',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\nAves (Vista) \nVideo (tacto)',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\n\n ⚡**Actividad 1:** Observa el ave (estimula el sentido de la vista) \n\n ⚡**Actividad 2:** Adivina el objeto (estimula el sentido del tacto)',
           actividad1: 'https://v4.brainhq.com/?signup=success&fr=y#subscribe/browse',
           actividad2: 'https://www.youtube.com/watch?v=xPxHz1gL76I&ab_channel=InfantilAlbanta',
-          materiales:'En una bolsa de tela o una funda negra colocar 5 juegutes que más use o le guste al niño y otros 5 de objetos que use a diario el niño (cuchara, borrador, etc). El niño debe sacar un objeto de la bolsa y adivinar qué es con lo ojos vendados '
+          materiales:'En una bolsa de tela o en una funda negra, colocar 5 juguetes que más use o le guste al niño o niña, y otros 5 de objetos que use a diario el niño (cuchara, borrador, etc). El niño debe sacar un objeto de la bolsa y adivinar qué es con los ojos vendados.'
         },
         {
           nivel: 'Nivel 3',
-          descripcion:'Ambas actividades requieren que el niño o niña esté tapado por ojos\n🐬Estimulación del gusto: con una cuchara hacerle probar al niño distintos sabores de alimetos que tenga en la casa (azúcar, café, sal, jugo, mermelada, chocolate) que sean de consistencia líquida.\n🐬Estimulación del olfato: hacerle oler olores agradables como las plantas medicinales, clavo de olor, canela, vainilla, cítricos, etc. \n🐥Adivinar 5-10 sabores',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\n Ambas actividades requieren que el niño o niña esté tapado por ojos \n\n ⚡ **Actividad 1:** Adivina, adivina ¿qué hay en tu boquita? (estimula el sentido del gusto) \nCon una cuchara hacerle probar al niño distintos sabores de alimetos que tenga en la casa (azúcar, café, sal, jugo, mermelada, chocolate) que sean de consistencia líquida. \n\n ⚡ **Actividad 2:** Adivina el objeto (estimula el sentido del tacto) \n🔥 Hacerle oler olores agradables como las plantas medicinales, clavo de olor, canela, vainilla, cítricos, etc.',
           actividad1: 'https://www.youtube.com/watch?v=Ycuvrz9huR8&ab_channel=Mam%C3%A1Montessori',
           actividad2: 'https://www.youtube.com/watch?v=AytUupIwPc8&ab_channel=KidsIntegralEstimulaci%C3%B3nTemprana',
-          materiales:''
+          materiales:'Adivinar 5 - 10 olores '
         }
       ],
       'Motricidad': [
         {
           nivel: 'Nivel 1',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal, mediante 3 ejercicios\n Plastilina (Motricidad fina)\nCintas(Motricidad gruesa)',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal.\n\n ⚡**Actividad 1:** Dibujos con plastilina (motricidad fina)\n\n ⚡**Actividad 2:** Toca las cintas (motricidad gruesa)',
           actividad1: 'https://www.youtube.com/watch?v=fo5cP3SXqM8',
           actividad2: 'https://www.youtube.com/watch?v=gORn1E8ez9w',
-          materiales:'Materiales: Con una cinta, lana o algo similar que tenga de largo 2 metros y amarrar cada extremos a una silla, luego amarrar 4 cintas o medias de diferentes colores. El padre le va a decir qué colores debe tocar el niño o niña con el pie, (ejemplos: amarillo, azul, amarillo, rosado)'
+          materiales:'Con una cinta, lana o algo similar, de 2 metros de largo. Amarrar cada extremos del material que dispone a una silla, luego amarrar 4 cintas o medias de diferentes colores. El padre le va a decir qué colores debe tocar el niño o niña con el pie, (ejemplos: amarillo, azul, amarillo, rosado), 🔥 Ejercicio 1: 4 colores , 🔥 Ejercicios 2: 5 colores y 🔥Ejercicio 3: 6 colores '
         },
         {
           nivel: 'Nivel 2',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\n (Actividad 1) Hacer 6 bolitas de papel de diferentes 4 colores diferentes, luego el niño con uns pinza de ropa las va a clasificar por colores, puede usar una tapa o recipiente para colocarlas - (Motricidad fina) \n (Actividad 2) Ejercicio 1: encestar la pelota en una tina, canasta o lo más similar que tenga a una canasta. Encestar 3 veces cuando la canasta está a un metro, luego encestar 3 veces a metro y medio - (Motricidad gruesa)',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal.\n\n ⚡**Actividad 1:** Pinzas y bolitas (motricidad fina) \n\n ⚡**Actividad 2:** Atrapa la pelota (motricidad gruesa))\n Encestar la pelota en una tina, canasta o lo más similar que tenga a una canasta. Encestar 3 veces cuando la canasta está a un metro, luego encestar 3 veces a metro y medio',
           actividad1: 'https://www.youtube.com/watch?v=nMGMjR784ag&ab_channel=SOSTerapeutas',
           actividad2: 'https://www.youtube.com/watch?v=go8LzrjZa1s&ab_channel=UNICEFBolivia',
-          materiales:''
+          materiales:'Hacer 6 bolitas de papel de diferentes 4 colores diferentes, luego el niño con uns pinza de ropa las va a clasificar por colores, puede usar una tapa o recipiente para colocarlas'
         },
         {
           nivel: 'Nivel 3',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal\n Saltos (Motricidad gruesa)\n Enrollando frutas',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal.\n\n ⚡**Actividad 1:** Enrolla a las frutas (motricidad fina)\n\n ⚡**Actividad 2:** Baile con saltos (motricidad gruesa)',
           actividad1: 'https://www.youtube.com/watch?v=LNzrq9pHI0w&ab_channel=PlayKidsEspa%C3%B1ol',
           actividad2: 'https://www.youtube.com/watch?v=h3X1BP-z8Nw&ab_channel=ConMami',
-          materiales:'Elegir 2 frutas y en un cartón el padre dibujará la forma de la fruta para luego darle al niño  que con lana las enrollo hasta tapar el cartón y luego con cartulina pegar la hoja de la fruta, en caso de que tenga. '
+          materiales:'Elegir 2 frutas y en un cartón el padre dibujará la forma de la fruta para luego darle al niño  que con lana las enrollo hasta tapar el cartón y luego con cartulina pegar la hoja de la fruta, en caso de que tenga.'
         }
       ],
       'Cognitiva': [
         {
           nivel: 'Nivel 1',
-          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n (Alfabeto) \n (Objeto que encaja)',
+          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n\n ⚡**Actividad 1:** Ordenar el alfabeto \n\n  ⚡**Actividad 2:** ¿Qué objeto encaja?',
           actividad1: 'https://www.abcya.com/games/alphabet ',
           actividad2: 'https://www.cokitos.com/que-objeto-encaja/play/',
           materiales:''
         },
         {
           nivel: 'Nivel 2',
-          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n (Rompecabezas) \n (Contar animales)',
+          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n\n ⚡**Actividad 1:** Armar el rompecabezas \n\n  ⚡**Actividad 2:** Cuenta los animales',
           actividad1: 'https://www.abcya.com/games/alphabet_puzzle',
           actividad2: 'https://www.cokitos.com/contar-animales-hasta-10/play/',
           materiales:''
         },
         {
           nivel: 'Nivel 3',
-          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n (Patrón) \n (Clasificar por figuras geométricas)',
+          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n\n ⚡**Actividad 1:** Completa el patrón y secuencias \n\n  ⚡**Actividad 2:** Clasifica el objeto según su forma',
           actividad1: 'https://www.youtube.com/watch?v=nXvuji6-mJc&ab_channel=CasitaPreescolar',
           actividad2: 'https://wordwall.net/es/resource/14264627/figuras-geometricas',
           materiales:''
@@ -348,7 +348,7 @@ private obtenerJuegosPorInteres(edad: string, area: string): { descripcion?: str
       'Relajacion': [
         {
           nivel: 'Nivel 1',
-          descripcion:'🐬 En este nivel, el objetivo es ayudarte a relajarte y reducir el estrés a través de actividades calmantes. \nObservar el video desde el min 0:35',
+          descripcion:'🐬 En este nivel, el objetivo es ayudarte a relajarte y reducir el estrés a través de actividades calmantes. \n\n ⚡Observar el video desde el min 0:35',
           actividad1: 'https://www.youtube.com/watch?v=o9uaRmHiAwc&ab_channel=SmileandLearn-Espa%C3%B1ol',
           actividad2: '',
           materiales:''
@@ -373,44 +373,44 @@ private obtenerJuegosPorInteres(edad: string, area: string): { descripcion?: str
       'Sensorial': [
         {
           nivel: 'Nivel 1',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\n(Oír) \nPiano (tacto)',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\n\n ⚡**Actividad 1:** Adivina los sonidos (estimula el sentido del oído) \n\n ⚡**Actividad 2:** ¿Qué es? (estimula el sentido del tacto)',
           actividad1: 'https://www.youtube.com/watch?v=OI9_wYCifkk&ab_channel=LaProfeAnaHenao',
           actividad2: 'https://www.youtube.com/watch?v=zap-SMqs7GE',
-          materiales:'en recipientes colocar materiales, objetos o alimentos que tenga en casa de preferencia (lentejas, espuma de afeitar, algodón, botones, arroz, esponja, plumas, fideos). El niño con los ojos vendados debe decir si su textura es aspera o lisa, su forma y tamaño. Si deseas continuar con la actividad, puede crear fundas sensoriales: https://www.youtube.com/watch?v=N996jvCYNks&ab_channel=EugeniaRomero'
+          materiales:'🔥En recipientes colocar materiales, objetos o alimentos que tenga en casa de preferencia (lentejas, espuma de afeitar, algodón, botones, arroz, esponja, plumas, fideos). El niño con los ojos vendados debe decir si su textura es áspera o lisa, su forma y tamaño. 🔥 Si deseas continuar con la actividad, puede crear fundas sensoriales: https://www.youtube.com/watch?v=N996jvCYNks&ab_channel=EugeniaRomero '
         },
         {
           nivel: 'Nivel 2',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\nOndas(Vista) \nExperimentos',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\n\n ⚡**Actividad 1:** ¿En qué dirección va la onda? (estimula el sentido de la vista) \n\n ⚡**Actividad 2:** Experimentos creativos (estimula el sentido del tacto)',
           actividad1: 'https://v4.brainhq.com/?signup=success&fr=y#subscribe/browse ',
           actividad2: 'https://www.youtube.com/watch?v=w_o0hUiZdVA&ab_channel=Haival',
-          materiales:''
+          materiales:'🔥Realizar 3 experimentos con materiales que tengan en su casa o sea de fácil acceso '
         },
         {
           nivel: 'Nivel 3',
-          descripcion:'En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\nPelotitas(Vista) \nAdivina una fruta o vertura(gusto)',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\n\n ⚡**Actividad 1:** Secuencia de bolitas (estimula la vista) \n\n ⚡**Actividad 2:** ¿Fruta o verdura? (estimula el sentido del gusto)',
           actividad1: 'https://v4.brainhq.com/?signup=success&fr=y#subscribe/browse',
           actividad2: 'https://www.youtube.com/watch?v=xPVkafLsNUk&ab_channel=ReysusideasCreativas',
-          materiales:'Cubrir los ojos del niño para que identifique que identifique entre verduras y frutas, el padre o la madre va a colocar en recipientes pedazos pequeños de fruta y verduras, el niño debe identificar cuál es y cómo se llama (si no desean usar esos alimentos puede usar los de su preferencia).'
+          materiales:'🔥Cubrir los ojos del niño para que identifique que identifique entre verduras y frutas, el padre o la madre va a colocar en recipientes pedazos pequeños de fruta y verduras, el niño debe identificar cuál es y cómo se llama (si no desean usar esos alimentos puede usar los de su preferencia).'
         }
       ],
       'Motricidad': [
         {
           nivel: 'Nivel 1',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal\n Baile (Motricidad gruesa)',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal.\n\n ⚡**Actividad 1:** Pesca las gomas (motricidad fina)\n\n ⚡**Actividad 2:** Mueve tu cuerpo (motricidad gruesa)',
           actividad1: 'https://www.youtube.com/watch?v=r-i5BqoV8FM&ab_channel=DannyGo%21Espa%C3%B1ol',
           actividad2: 'https://www.youtube.com/shorts/-AUZbznQxgg',
-          materiales:'Pescar gomas (un sorbete o palo de pincho sin punta, y una tina con agua llenas de varias ligar), Ejercicio 1: 10 gomas en 1 min Ejericicio 2: 15 gomas en 1 min, Ejercicios 3: 20 gomas en 1 min 30 seg'
+          materiales:'Con un sorbete o palo de pincho sin punta debes pescar las gomas o ligas, una tina con agua y las ligas, para empezar a jugar.   🔥 Ejercicio 1: 10 gomas en 1 min 🔥 Ejercicio 2: 15 gomas en 1 min 🔥 Ejercicios 3: 20 gomas en 1 min 30 seg'
         },
         {
           nivel: 'Nivel 2',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal\n Origami (Motricidad fina)\n Baila (Motricidad gruesa)',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal.\n\n ⚡**Actividad 1:** Realiza el origami de un pez (motricidad fina)\n\n ⚡**Actividad 2:** Baila baila ASÍ (motricidad gruesa)',
           actividad1: 'https://www.youtube.com/watch?v=tJ887j_q4j8&ab_channel=ManualidadesPlay',
           actividad2: 'https://www.youtube.com/watch?v=IcoZre9gL4k&ab_channel=LingokidsenEspa%C3%B1ol-CancionesyDibujos',
           materiales:''
         },
         {
           nivel: 'Nivel 3',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal\n Origami (Motricidad fina)\n Tejer con las manos',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal.\n\n ⚡**Actividad 1:** Origami de un delfín (motricidad fina)\n\n ⚡**Actividad 2:** Tejer con tus dedos (motricidad fina)',
           actividad1: 'https://www.youtube.com/watch?v=trvcgXYTUbU&ab_channel=ManualidadesPlay',
           actividad2: 'https://www.youtube.com/shorts/539pGBtqiYY',
           materiales:''
@@ -419,21 +419,21 @@ private obtenerJuegosPorInteres(edad: string, area: string): { descripcion?: str
       'Cognitiva': [
         {
           nivel: 'Nivel 1',
-          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n (Encontrar pares) \n (Clasificar)',
+          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n\n ⚡**Actividad 1:** Encuentra los pares \n\n  ⚡**Actividad 2:** Clasifica en los tachos de colores ',
           actividad1: 'https://www.cokitos.com/juego-concentrese-de-formas/play/',
           actividad2: 'https://www.cokitos.com/recycling-time-2/play/ ',
           materiales:''
         },
         {
           nivel: 'Nivel 2',
-          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n (Secuencia) \n (Ahorcado animales)',
+          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n\n ⚡**Actividad 1:** Resuelve la secuencia  \n\n  ⚡**Actividad 2:** Descifra el mensaje secreto.',
           actividad1: 'https://www.abcya.com/games/alphabet_puzzle',
           actividad2: 'https://www.cokitos.com/decipher-descifrar-un-mensaje-en-clave/play/',
           materiales:''
         },
         {
           nivel: 'Nivel 3',
-          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n (Unir puntos) \n (Sopa de letras)',
+          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n\n ⚡**Actividad 1:** Une los puntos.  \n\n  ⚡**Actividad 2:** Completa la sopa de letras.',
           actividad1: 'https://www.cokitos.com/unir-puntos-de-numeros/play/',
           actividad2: 'https://www.cokitos.com/sopa-de-letras-de-animales-en-espanol/play/',
           materiales:''
@@ -442,22 +442,22 @@ private obtenerJuegosPorInteres(edad: string, area: string): { descripcion?: str
       'Relajacion': [
         {
           nivel: 'Nivel 1',
-          descripcion:'🐬 En este nivel, el objetivo es ayudarte a relajarte y reducir el estrés a través de actividades calmantes. \nObservar el video desde el min 0:35',
-          actividad1: ' https://www.youtube.com/watch?v=o9uaRmHiAwc',
+          descripcion:'🐬 En este nivel, el objetivo es ayudarte a relajarte y reducir el estrés a través de actividades calmantes.',
+          actividad1: 'https://www.youtube.com/watch?v=o9uaRmHiAwc&ab_channel=SmileandLearn-Espa%C3%B1ol',
           actividad2: '',
           materiales:''
         },
         {
           nivel: 'Nivel 2',
           descripcion:'🐬 En este nivel, el objetivo es ayudarte a relajarte y reducir el estrés a través de actividades calmantes.',
-          actividad1: 'https://www.youtube.com/watch?v=t8748OWc1nQ',
+          actividad1: 'https://www.youtube.com/watch?v=t8748OWc1nQ&ab_channel=SmileandLearn-Espa%C3%B1ol',
           actividad2: '',
           materiales:''
         },
         {
           nivel: 'Nivel 3',
           descripcion:'🐬 En este nivel, el objetivo es ayudarte a relajarte y reducir el estrés a través de actividades calmantes.',
-          actividad1: 'https://www.youtube.com/watch?v=vxoJ1T-mB1E',
+          actividad1: 'https://www.youtube.com/watch?v=vxoJ1T-mB1E&ab_channel=SoulMatesKid%27sYogaandMindfulness',
           actividad2: '',
           materiales:''
         }
@@ -467,44 +467,44 @@ private obtenerJuegosPorInteres(edad: string, area: string): { descripcion?: str
       'Sensorial': [
         {
           nivel: 'Nivel 1',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\n(Oír) \nPiano (tacto)',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\n\n ⚡**Actividad 1:** Adivina los sonidos (estimula el sentido del oído) \n\n ⚡**Actividad 2:** ¿Qué es? (estimula el sentido del tacto)',
           actividad1: 'https://www.youtube.com/watch?v=OI9_wYCifkk&ab_channel=LaProfeAnaHenao',
           actividad2: 'https://www.youtube.com/watch?v=zap-SMqs7GE',
-          materiales:'en recipientes colocar materiales, objetos o alimentos que tenga en casa de preferencia (lentejas, espuma de afeitar, algodón, botones, arroz, esponja, plumas, fideos). El niño con los ojos vendados debe decir si su textura es aspera o lisa, su forma y tamaño. Si deseas continuar con la actividad, puede crear fundas sensoriales: https://www.youtube.com/watch?v=N996jvCYNks&ab_channel=EugeniaRomero'
+          materiales:'🔥En recipientes colocar materiales, objetos o alimentos que tenga en casa de preferencia (lentejas, espuma de afeitar, algodón, botones, arroz, esponja, plumas, fideos). El niño con los ojos vendados debe decir si su textura es áspera o lisa, su forma y tamaño. 🔥 Si deseas continuar con la actividad, puede crear fundas sensoriales: https://www.youtube.com/watch?v=N996jvCYNks&ab_channel=EugeniaRomero '
         },
         {
           nivel: 'Nivel 2',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\nOndas(Vista) \nExperimentos',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\n\n ⚡**Actividad 1:** ¿En qué dirección va la onda? (estimula el sentido de la vista) \n\n ⚡**Actividad 2:** Experimentos creativos (estimula el sentido del tacto)',
           actividad1: 'https://v4.brainhq.com/?signup=success&fr=y#subscribe/browse ',
           actividad2: 'https://www.youtube.com/watch?v=w_o0hUiZdVA&ab_channel=Haival',
-          materiales:''
+          materiales:'🔥Realizar 3 experimentos con materiales que tengan en su casa o sea de fácil acceso '
         },
         {
           nivel: 'Nivel 3',
-          descripcion:'En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\nPelotitas(Vista) \nAdivina una fruta o vertura(gusto)',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación sensorial mediante actividades visuales y auditivas.\n\n ⚡**Actividad 1:** Secuencia de bolitas (estimula la vista) \n\n ⚡**Actividad 2:** ¿Fruta o verdura? (estimula el sentido del gusto)',
           actividad1: 'https://v4.brainhq.com/?signup=success&fr=y#subscribe/browse',
           actividad2: 'https://www.youtube.com/watch?v=xPVkafLsNUk&ab_channel=ReysusideasCreativas',
-          materiales:'Cubrir los ojos del niño para que identifique que identifique entre verduras y frutas, el padre o la madre va a colocar en recipientes pedazos pequeños de fruta y verduras, el niño debe identificar cuál es y cómo se llama (si no desean usar esos alimentos puede usar los de su preferencia).'
+          materiales:'🔥Cubrir los ojos del niño para que identifique que identifique entre verduras y frutas, el padre o la madre va a colocar en recipientes pedazos pequeños de fruta y verduras, el niño debe identificar cuál es y cómo se llama (si no desean usar esos alimentos puede usar los de su preferencia).'
         }
       ],
       'Motricidad': [
         {
           nivel: 'Nivel 1',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal\n Baile (Motricidad gruesa)',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal.\n\n ⚡**Actividad 1:** Pesca las gomas (motricidad fina)\n\n ⚡**Actividad 2:** Mueve tu cuerpo (motricidad gruesa)',
           actividad1: 'https://www.youtube.com/watch?v=r-i5BqoV8FM&ab_channel=DannyGo%21Espa%C3%B1ol',
           actividad2: 'https://www.youtube.com/shorts/-AUZbznQxgg',
-          materiales:'Pescar gomas (un sorbete o palo de pincho sin punta, y una tina con agua llenas de varias ligar), Ejercicio 1: 10 gomas en 1 min Ejericicio 2: 15 gomas en 1 min, Ejercicios 3: 20 gomas en 1 min 30 seg'
+          materiales:'Con un sorbete o palo de pincho sin punta debes pescar las gomas o ligas, una tina con agua y las ligas, para empezar a jugar.   🔥 Ejercicio 1: 10 gomas en 1 min 🔥 Ejercicio 2: 15 gomas en 1 min 🔥 Ejercicios 3: 20 gomas en 1 min 30 seg'
         },
         {
           nivel: 'Nivel 2',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal\n Origami (Motricidad fina)\n Baila (Motricidad gruesa)',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal.\n\n ⚡**Actividad 1:** Realiza el origami de un pez (motricidad fina)\n\n ⚡**Actividad 2:** Baila baila ASÍ (motricidad gruesa)',
           actividad1: 'https://www.youtube.com/watch?v=tJ887j_q4j8&ab_channel=ManualidadesPlay',
           actividad2: 'https://www.youtube.com/watch?v=IcoZre9gL4k&ab_channel=LingokidsenEspa%C3%B1ol-CancionesyDibujos',
           materiales:''
         },
         {
           nivel: 'Nivel 3',
-          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal\n Origami (Motricidad fina)\n Tejer con las manos',
+          descripcion:'🐬 En este nivel, tu objetivo es trabajar en la estimulación motriz mediante actividades que fomenten el desarrollo de la coordinación y el control corporal.\n\n ⚡**Actividad 1:** Origami de un delfín (motricidad fina)\n\n ⚡**Actividad 2:** Tejer con tus dedos (motricidad fina)',
           actividad1: 'https://www.youtube.com/watch?v=trvcgXYTUbU&ab_channel=ManualidadesPlay',
           actividad2: 'https://www.youtube.com/shorts/539pGBtqiYY',
           materiales:''
@@ -513,21 +513,21 @@ private obtenerJuegosPorInteres(edad: string, area: string): { descripcion?: str
       'Cognitiva': [
         {
           nivel: 'Nivel 1',
-          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n (Encontrar pares) \n (Clasificar)',
+          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n\n ⚡**Actividad 1:** Encuentra los pares \n\n  ⚡**Actividad 2:** Clasifica en los tachos de colores ',
           actividad1: 'https://www.cokitos.com/juego-concentrese-de-formas/play/',
           actividad2: 'https://www.cokitos.com/recycling-time-2/play/ ',
           materiales:''
         },
         {
           nivel: 'Nivel 2',
-          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n (Secuencia) \n (Ahorcado animales)',
+          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n\n ⚡**Actividad 1:** Resuelve la secuencia  \n\n  ⚡**Actividad 2:** Descifra el mensaje secreto.',
           actividad1: 'https://www.abcya.com/games/alphabet_puzzle',
           actividad2: 'https://www.cokitos.com/decipher-descifrar-un-mensaje-en-clave/play/',
           materiales:''
         },
         {
           nivel: 'Nivel 3',
-          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n (Unir puntos) \n (Sopa de letras)',
+          descripcion:'🐬 En este nivel, tu objetivo es estimular la mente a través de actividades que desafíen tu memoria, concentración y razonamiento. \n\n ⚡**Actividad 1:** Une los puntos.  \n\n  ⚡**Actividad 2:** Completa la sopa de letras.',
           actividad1: 'https://www.cokitos.com/unir-puntos-de-numeros/play/',
           actividad2: 'https://www.cokitos.com/sopa-de-letras-de-animales-en-espanol/play/',
           materiales:''
@@ -536,22 +536,22 @@ private obtenerJuegosPorInteres(edad: string, area: string): { descripcion?: str
       'Relajacion': [
         {
           nivel: 'Nivel 1',
-          descripcion:'🐬 En este nivel, el objetivo es ayudarte a relajarte y reducir el estrés a través de actividades calmantes. \nObservar el video desde el min 0:35',
-          actividad1: ' https://www.youtube.com/watch?v=o9uaRmHiAwc',
+          descripcion:'🐬 En este nivel, el objetivo es ayudarte a relajarte y reducir el estrés a través de actividades calmantes.',
+          actividad1: 'https://www.youtube.com/watch?v=o9uaRmHiAwc&ab_channel=SmileandLearn-Espa%C3%B1ol',
           actividad2: '',
           materiales:''
         },
         {
           nivel: 'Nivel 2',
           descripcion:'🐬 En este nivel, el objetivo es ayudarte a relajarte y reducir el estrés a través de actividades calmantes.',
-          actividad1: 'https://www.youtube.com/watch?v=t8748OWc1nQ',
+          actividad1: 'https://www.youtube.com/watch?v=t8748OWc1nQ&ab_channel=SmileandLearn-Espa%C3%B1ol',
           actividad2: '',
           materiales:''
         },
         {
           nivel: 'Nivel 3',
           descripcion:'🐬 En este nivel, el objetivo es ayudarte a relajarte y reducir el estrés a través de actividades calmantes.',
-          actividad1: 'https://www.youtube.com/watch?v=vxoJ1T-mB1E',
+          actividad1: 'https://www.youtube.com/watch?v=vxoJ1T-mB1E&ab_channel=SoulMatesKid%27sYogaandMindfulness',
           actividad2: '',
           materiales:''
         }

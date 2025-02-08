@@ -39,7 +39,9 @@ export class ResultadosComponent implements OnInit {
   }
 
   formatDescription(description: string): string {
-    return description.replace(/\n/g, '<br>');
+    return description
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\n/g, '<br>');
   }
 
 }
