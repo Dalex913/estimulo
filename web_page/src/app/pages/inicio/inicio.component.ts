@@ -150,7 +150,7 @@ export class InicioComponent implements AfterViewInit {
 
   testimonials: Testimonial[] = [
     {
-      name: 'Verónica Ruiz',
+      name: 'Camila Herrera',
       title: 'Psicólogo Infantil y Psicorrehabilitación',
       quote: '“Mi enfoque es  proporcionar apoyo emocional integral a niños que enfrentan desafíos como ansiedad, estrés y dificultades conductuales. A través de la terapia lúdica, crea un entorno seguro y de confianza, facilitando el proceso terapéutico y el desarrollo emocional de sus pacientes.”',
       imageUrl: 'https://s3-eu-west-1.amazonaws.com/doctoralia.es/doctor/bef3d6/bef3d6ce10abef06e4ec834adf11c5c5_large.jpg'

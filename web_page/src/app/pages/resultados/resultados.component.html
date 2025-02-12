@@ -33,7 +33,6 @@
             <!-- Se itera sobre cada juego (nivel) -->
             <div *ngFor="let juego of recomendaciones?.juegos; let i = index"
               class="grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-6 m-4 shadow-md rounded-xl border-4 border-violet-200 bg-white">
-
               <!-- Sección de información y botones -->
               <div class="md:max-w-md w-full py-4">
                 <div class="px-8">
@@ -117,6 +116,94 @@
         </div>
         <img src="https://media.lordicon.com/icons/wired/flat/261-emoji-smile.gif" alt="login-image"
           class="w-100 h-80 rounded-xl lg:w-140 lg:h-140" />
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-white">
+  <div class="container px-6 py-8 mx-auto">
+    <div class="sm:flex sm:flex-col sm:items-center sm:justify-center text-center">
+      <div>
+        <h1 class="text-3xl font-extrabold lg:text-4xl 3xl:text-5xl mb-10">
+          <span class="animated-gradient">
+            ¿Quieres seguir estimulando?
+          </span>
+        </h1>
+      </div>
+      <a (click)="isModalOpen = true" class="relative px-6 py-3 font-bold text-black group mt-4 cursor-pointer">
+        <span
+          class="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-red-300 group-hover:translate-x-0 group-hover:translate-y-0"></span>
+        <span class="absolute inset-0 w-full h-full border-4 border-black"></span>
+        <span class="relative text-xl">Mostrar planes</span>
+      </a>
+    </div>
+
+    <!-- Modal -->
+    <div *ngIf="isModalOpen" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 p-4"
+      (click)="isModalOpen = false">
+      <div
+        class="bg-gradient-to-r from-purple-300 via-pink-300 to-yellow-300 p-6 rounded-lg shadow-2xl w-full max-w-4xl md:max-w-4xl sm:max-w-sm max-h-[80vh] overflow-y-auto border-2 border-black"
+        (click)="$event.stopPropagation()">
+        <div class="flex justify-between items-center">
+          <h2 class="text-2xl font-extrabold text-gray-800">🌟 Planes de Precios 🌟</h2>
+          <button class="text-gray-800 text-2xl hover:text-red-500" (click)="isModalOpen = false">✖</button>
+        </div>
+
+        <!-- Contenido -->
+        <div class="grid gap-6 mt-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+          <!-- Paquete Básico -->
+          <div
+            class="p-6 bg-blue-200 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 flex flex-col items-center text-center">
+            <p class="text-lg font-bold text-gray-900">⭐ Paquete Básico ⭐</p>
+            <h4 class="mt-2 text-3xl font-extrabold text-gray-900">$1.00</h4>
+            <p class="mt-4 text-gray-800">✅ 1 Nivel de estimulación</p>
+            <button
+              class="w-full px-4 py-2 mt-auto text-lg font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition">
+              Continuar 🚀
+            </button>
+          </div>
+
+          <!-- Paquete Estándar -->
+          <div
+            class="p-6 bg-green-200 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 flex flex-col items-center text-center">
+            <p class="text-lg font-bold text-gray-900">🌟 Paquete Estándar 🌟</p>
+            <h4 class="mt-2 text-3xl font-extrabold text-gray-900">$3.00</h4>
+            <p class="mt-4 text-gray-800">✅ 1 Nivel en todas las estimulaciones</p>
+            <p class="text-gray-800">✅ Incluye actividades de relajación</p>
+            <button
+              class="w-full px-4 py-2 mt-auto text-lg font-bold text-white bg-green-500 rounded-lg hover:bg-green-600 transition">
+              Continuar 🎉
+            </button>
+          </div>
+
+          <!-- Paquete Premium -->
+          <div
+            class="p-6 bg-purple-500 text-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 flex flex-col items-center text-center">
+            <p class="text-lg font-bold">💎 Paquete Premium 💎</p>
+            <h4 class="mt-2 text-3xl font-extrabold">$5.00</h4>
+            <p class="mt-4">✅ 3 Niveles en cualquier estimulación</p>
+            <p>✅ Incluye actividades de relajación</p>
+            <button
+              class="w-full px-4 py-2 mt-auto text-lg font-bold bg-yellow-400 text-gray-900 rounded-lg hover:bg-yellow-500 transition">
+              Continuar 🎨
+            </button>
+          </div>
+
+          <!-- Paquete VIP -->
+          <div
+            class="p-6 bg-red-200 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 flex flex-col items-center text-center">
+            <p class="text-lg font-bold text-gray-900">👑 Paquete VIP 👑</p>
+            <h4 class="mt-2 text-3xl font-extrabold text-gray-900">$10.00</h4>
+            <p class="mt-4 text-gray-800">✅ 5 Niveles en todas las estimulaciones</p>
+            <p class="text-gray-800">✅ Actividades de relajación incluidas</p>
+            <button
+              class="w-full px-4 py-2 mt-auto text-lg font-bold text-white bg-red-500 rounded-lg hover:bg-red-600 transition">
+              Continuar 🔥
+            </button>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
